@@ -21,6 +21,10 @@
     background-color: $blanco;
     margin-top: $margin;
     margin-bottom: $margin*2;
+    .toLeft {
+        text-align: left;
+        margin-left: 10px;
+    }
 }
 
 /* Subtítulos - h3-----*/ 

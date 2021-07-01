@@ -15,9 +15,8 @@
 </head>
 
 <body>
-    <div class="container">
         <!-- Caja principal del header -->
-        <header>
+        <header class="container">
             <!-- Logo -->
             <img class="logo" src="../img/Logo 300x300.png" alt="Decorarte Accesorios Impresos">
             <!-- Menu secundario -->
@@ -40,16 +39,6 @@
                     <div>
                         <a href="../index.html">Inicio</a>
                         <a href="nosotros.html" class="active">Nosotros</a>
-                        <div class="dropdown">
-                            <a class="dropbtn" href="#">Productos 
-                            </a>
-                            <div class="dropdown-content">
-                                <a href="productos.html">Cortantes</a>
-                                <a href="productos.html">Cake toppers</a>
-                                <a href="productos.html">Sellos</a>
-                                <a href="productos.html">Herramientas</a>
-                            </div>
-                        </div> 
                         <a href="descargas.html">Receta</a>
                         <a href="contacto.html">Contacto</a>
                         <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
@@ -69,7 +58,7 @@
 
         <hr>
         
-        <main class="nosotros">
+        <main class="container nosotros">
             
             <img class="img-fluid nosotros-img" src="../img/Impresoras.png" alt="Impresoras 3d">
             
@@ -83,98 +72,64 @@
             </div>
         </main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <footer>
-            <ul class="menuFooter">
-                <li>
-                    <a href="../index.html">Inicio</a>
-                </li>
-                <li>
-                    <a href="nosotros.html">Nosotros</a>
-                </li>
-                <li>
-                    <a href="productos.html">Productos</a>
-                </li>
-                <li>
-                    <a href="descargas.html">Receta</a>
-                </li>
-                <li>
-                    <a href="contacto.html">Contacto</a>
-                </li>
-            </ul>
-            <ul class="menuFooter">
-                <li>
-                    <a href="#">Envíos</a>
-                </li>
-                <li>
-                    <a href="#">Medios de Pago</a>
-                </li>
-                <li>
-                    <a href="#">Cómo comprar</a>
-                </li>
-                <li>
-                    <a href="#">Preguntas Frecuentes</a>
-                </li>
-                <li>
-                    <a href="sitemap.html">Mapa de Sitio</a>
-                </li>
-            </ul>
-            <ul class="menuFooter">
-                <li>
-                    Florencio Varela, Bs. As., Argentina
-                </li>
-                <li>
-                    Whatsapp: +5411-7361-1513
-                </li>
-                <li>
-                    <img class="redesSociales" src="../img/facebook.svg" alt="Facebook">
-                    <img class="redesSociales" src="../img/instagram.svg" alt="Instagram">
-                    <img class="redesSociales" src="../img/whatsapp.svg" alt="Whatsapp">
-                </li>
-            </ul>
-            <div>
-                <img class="logoFooter" src="../img/Logo 300x300.png" alt="Decorarte Accesorios Impresos">
+            <div class="container contenidoFooter">
+                <ul class="menuFooter">
+                    <li>
+                        <a href="../index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="nosotros.html">Nosotros</a>
+                    </li>
+                    <li>
+                        <a href="../index.html">Productos</a>
+                    </li>
+                    <li>
+                        <a href="descargas.html">Receta</a>
+                    </li>
+                    <li>
+                        <a href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                <ul class="menuFooter">
+                    <li>
+                        <a href="#">Envíos</a>
+                    </li>
+                    <li>
+                        <a href="#">Medios de Pago</a>
+                    </li>
+                    <li>
+                        <a href="#">Cómo comprar</a>
+                    </li>
+                    <li>
+                        <a href="#">Preguntas Frecuentes</a>
+                    </li><li>
+                        <a href="./sitemap.html">Mapa de Sitio</a>
+                    </li>
+                </ul>
+                <ul class="menuFooter">
+                    <li>
+                        Florencio Varela, Bs. As., Argentina
+                    </li>
+                    <li>
+                        Whatsapp: +5411-7361-1513
+                    </li>
+                    <li>
+                        <img class="redesSociales" src="../img/facebook.svg" alt="Facebook">
+                        <img class="redesSociales" src="../img/instagram.svg" alt="Instagram">
+                        <img class="redesSociales" src="../img/whatsapp.svg" alt="Whatsapp">
+                    </li>
+                </ul>
+                <div>
+                    <img class="logoFooter" src="img/Logo 300x300.png" alt="Decorarte Accesorios Impresos">
+                </div>
             </div>
         </footer>
-    </div>
 
 
+    <script src="../funciones/HTMLfunctions.js"></script>
 
 
-
-
-
-
-
-
-
-
-
-
-
-    <script>
-        function myFunction() {
-          var x = document.getElementById("myTopnav");
-          if (x.className === "topnav") {
-            x.className += " responsive";
-          } else {
-            x.className = "topnav";
-          }
-        }
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
     <script   script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
 </body>

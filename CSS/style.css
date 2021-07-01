@@ -153,6 +153,8 @@ footer {
     footer .contenidoFooter .logoFooter {
       width: 150px;
       height: 150px; }
+  footer .siteMapBckgnd {
+    height: 400px; }
 
 @media screen and (max-width: 992px) {
   footer .menufooter {
@@ -192,6 +194,9 @@ footer {
   background-color: #ffffff;
   margin-top: 20px;
   margin-bottom: 40px; }
+  .subtitulo2 .toLeft {
+    text-align: left;
+    margin-left: 10px; }
 
 /* Subtítulos - h3-----*/
 .subtitulo3 {
@@ -372,7 +377,9 @@ p {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin-top: 60px;
+  margin-bottom: 60px; }
   .sitemap .sitemapPage div {
     font-size: 20px;
     font-weight: bold; }
