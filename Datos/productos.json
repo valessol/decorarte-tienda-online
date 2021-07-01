@@ -1,0 +1,114 @@
+[
+    {
+        "id": 1,
+        "categoria": "CORTANTE",
+        "nombre": "Among Us",
+        "precio": 135,
+        "stock": 5
+    },
+    {
+        "id": 2,
+        "categoria": "CORTANTE",
+        "nombre": "Escudo de Boca Juniors",
+        "precio": 350,
+        "stock": 3
+    },
+    {
+        "id": 3,
+        "categoria": "CORTANTE",
+        "nombre": "Escudo de Independiente",
+        "precio": 350,
+        "stock": 4
+    },
+    {
+        "id": 4,
+        "categoria": "CORTANTE",
+        "nombre": "Escudo de Racing Club",
+        "precio": 400,
+        "stock": 2
+    },
+    {
+        "id": 5,
+        "categoria": "CORTANTE",
+        "nombre": "Jack - El Extraño mundo de Jack",
+        "precio": 112,
+        "stock": 3
+    },
+    {
+        "id": 6,
+        "categoria": "CORTANTE",
+        "nombre": "Sally - El Extraño mundo de Jack",
+        "precio": 137,
+        "stock": 4
+    },
+    {
+        "id": 7,
+        "categoria": "CORTANTE",
+        "nombre": "Granja",
+        "precio": 135,
+        "stock": 5
+    },
+    {
+        "id": 8,
+        "categoria": "CORTANTE",
+        "nombre": "Tractor 6 piezas",
+        "precio": 190,
+        "stock": 3
+    },
+    {
+        "id": 9,
+        "categoria": "CORTANTE",
+        "nombre": "Conejo de Pascua",
+        "precio": 150,
+        "stock": 4
+    },
+    {
+        "id": 10,
+        "categoria": "CORTANTE",
+        "nombre": "Sello de letras de 8mm",
+        "precio": 320,
+        "stock": 5
+    },
+    {
+        "id": 11,
+        "categoria": "TEXTURIZADOR",
+        "nombre": "Modelo 1",
+        "precio": 300,
+        "stock": 3
+    },
+    {
+        "id": 12,
+        "categoria": "TEXTURIZADOR",
+        "nombre": "Modelo 2",
+        "precio": 350,
+        "stock": 4
+    },
+    {
+        "id": 13,
+        "categoria": "TEXTURIZADOR",
+        "nombre": "Modelo 2",
+        "precio": 350,
+        "stock": 4
+    },
+    {
+        "id": 14,
+        "categoria": "CAKE TOPPER",
+        "nombre": "15 años",
+        "precio": 150,
+        "stock": 4
+    },
+    {
+        "id": 15,
+        "categoria": "CAKE TOPPER",
+        "nombre": "1Iniciales",
+        "precio": 100,
+        "stock": 2
+    },
+    {
+        "id": 16,
+        "categoria": "CAKE TOPPER",
+        "nombre": "Hello 30",
+        "precio": 160,
+        "stock": 3
+    }
+]

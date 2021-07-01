@@ -1,0 +1,752 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+@import "variables";
+
+/*HEADER-----------------------------*/
+@import "header";
+
+  /* FOOTER -------------------------------*/ 
+@import "footer";
+
+/* Componentes - Titulos, subtitulos, botones---------------------*/ 
+@import "componentes";
+
+/* Carrito---------------------------------------*/
+@import "carrito";
+
+/* Mapa de Sitio --------------------------*/ 
+@import "sitemap";
+
+/*HOME-----------------------------------------*/ 
+
+/* Hero Image */ 
+
+.home-hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url("../img/ppal.jpg");
+}
+
+  /*Main*/
+
+  .categorias {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      margin-bottom: 2*$margin;
+      .button {
+        width: 300px;
+        font-size: 20px;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: x-large;
+        font-weight: bold;
+      }
+  }
+  
+
+/* ARTICLE- Testimonios*/
+
+.articulo-testimonios {
+    margin: $margin 0 $margin 0;
+    .subtitulo2 {
+        text-align: left;
+        padding-left: $margin;
+    }
+    .bloque-testimonios {
+        background-color: $gris;
+        border-radius: $margin;
+        .testimonios img {
+            margin: $margin;
+        }
+        .card-testimonios {
+            background-color: $gris;
+            height: 300px;
+        }
+        p {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.testimoniosmax768 {
+    display: none;
+}
+
+/*ARTICLE- Novedades*/ 
+
+.novedades {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin: 2*$margin;
+    .card-novedades {
+        border: solid 2px $gris;
+        border-radius: 20px;
+        width: 400px;
+        height: 200px;
+    }
+    .button {
+        width: 100%;
+        margin-top: 0.5*$margin;
+        padding: 0.5*$margin;
+        font-size: 18px;
+        text-align: center;
+        font-weight: bold;
+    }
+    button:hover {
+        transform: scale(0.95);
+    }
+}
+
+/* ------------------------Fin del HOME---------------*/
+
+/*NOSOTROS-------------------*/ 
+
+.nosotros-hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url("../img/Impresoras2.png");
+     }
+
+ .nosotros {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: nowrap;
+     justify-content: stretch;
+        margin-bottom: $margin;
+        margin-top: 2*$margin;
+ }
+
+ /*-----------Fin de Nosotros----------*/ 
+
+
+/* PRODUCTOS--------------------------------*/
+
+.productos-hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url("../img/ppal.jpg");
+}
+
+/*Galeria de productos*/
+
+.acordeon768 {
+    display: none;
+}
+
+.acordeon {
+    .acordeonItem {
+        padding: $margin;
+        transition: transform 1s;
+        font-family: $fuentePpal;
+        text-transform: uppercase;
+    }
+}
+ .acordeonItem:hover {
+    background-color: rgb(247, 173, 173);
+    color:$gris;
+    border: none;
+}
+
+.galeria {
+    margin-bottom: $margin;
+    .galeriaNav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        .ordenar {
+            margin-bottom: $margin;
+            a {
+                text-decoration: none;
+                color:#252525;
+                padding: 5px;
+            }
+        }
+        .paginacion {
+            .numeracion {
+                color: rgba(0, 0, 0, 1);
+            }
+        }
+    }
+
+    .galeriaProductos {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        .galeriaItems {
+            transition-duration: 0.3s;
+            transition-property: box-shadow, transform; 
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0); 
+            width: 250px;
+            margin-bottom: $margin;
+            margin-left: 4px;
+            margin-right: 4px;
+        }
+        .galeriaItemCard {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            .galeriaFondo {
+                background-color: rgb(231, 227, 227);
+                opacity: 100%;
+            }
+    
+            .galeriaCard {
+                transform: none;
+            }
+            
+            .galeriaTitulo {
+                font-family: $fuentePpal;
+                font-size: 16px;
+                text-transform: uppercase;
+            }
+            
+            .galeriaPrecio {
+                font-family: $fuenteSec;
+                font-weight: bold;
+            }
+            
+            .button {
+                border-radius: 5px;
+                padding: 0;
+                .linkButton {
+                    width: 100%;
+                    font-family: $fuentePpal;
+                    font-size: 14px;
+                    color: $blanco;
+                }
+            }
+        }
+    }
+}
+
+.galeriaItems:hover div {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transform:scale(1.05)
+}
+ /*-----------------Fin de Productos---------------*/
+
+ /*DESCARGAS--------------------------*/ 
+
+.descargas-hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url("../img/Receta.jpg");
+     }
+ 
+
+ .suscripcion {
+    margin: $margin;
+    p {
+        text-align: left;
+        margin: 0;
+    }
+    .button {
+        padding: 0.5*$margin;
+        margin: 2*$margin;
+        text-align: center;
+        margin-left: 45%;
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+.descargas-contenido {
+    @extend .articulo-testimonios;
+    margin-top: 2*$margin;
+    margin-bottom: 2*$margin;
+    .bloque-contenido {
+        @extend .bloque-testimonios;
+    }
+    p {
+        color: $blanco;
+        text-align: left;
+        margin: 0;
+    }
+    ul {
+        color: $blanco;
+    }
+}
+
+ /*--------------------Fin de descargas--------------------*/ 
+
+
+ 
+
+ /* CONTACTO---------*/ 
+
+ .contacto-hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url("../img/contacto.jpg");
+     }
+
+ .contacto {
+    margin: 2*$margin;
+    .subtitulo2 {
+        text-align: left;
+        grid-area: subtitulo;
+        margin-bottom: $margin;
+    }
+    .mediosContacto {
+        display: grid;
+        grid-template-columns: 600px, 600px;
+        grid-template-areas:
+            "subtitulo form"  
+            "email form"
+            "whats form"
+            "horario form"
+            "descuento form";
+    }
+    .email {
+        grid-area: email;
+        font-size: 18px;
+    }
+    .whats {
+        grid-area: whats;
+        font-size: 18px;
+    }
+    .horario {
+        grid-area: horario;
+        font-size: 18px;
+    }
+    .form {
+        grid-area: form;
+        margin: 0;
+        background-color: $gris;
+        width: 600px;
+        height: 650px;
+        padding: $margin;
+        border-radius: $margin;
+        color: $blanco;
+            .motivo {
+                width: max-content;
+            }
+            .button {
+                margin-left: 45%; 
+                background-color: rgb(105, 104, 104);
+                width: 100px;
+                padding: 0.5*$margin;
+            }
+            .button:hover {
+                transform: none;
+                background-color: rgb(241, 135, 135);
+            }
+        } 
+    }
+
+    .descuento {
+        grid-area: descuento;
+        margin: $margin $margin $margin 0;
+        .subtitulo2 {
+            margin-bottom: $margin;
+        }
+        p {
+            text-align: left;
+            margin-bottom: 0;
+        }
+        li {
+            font-size: 18px;
+        }
+    }
+
+    .newsletter {
+        margin: 2*$margin 0 2*$margin 0;
+        width: 100%;
+        height: 200px;
+        background-color: rgb(241, 135, 135);
+        border-radius: $margin;
+        animation-name: suscription;
+        animation-duration: 5s;
+        div {
+            padding: $margin;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .button {
+            padding: 0.5*$margin;
+            margin: $margin;
+            text-align: center;
+            margin-left: 45%;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .button:hover {
+            background-color:  rgb(105, 104, 104);
+            color: $blanco;
+        }
+    }
+
+    @keyframes suscription {
+        from {background-color: $gris;}
+        to {background-color: rgb(241, 135, 135);}
+      }
+    
+
+      /*CARGA DE PRODUCTOS*/
+
+
+      .cargaProductos {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin:40px;
+          .subtitulo2 {
+              margin-bottom: 20px;
+          }
+          .form {
+            background-color: #252525;
+            width: 600px;
+            height: auto;
+            padding: 20px;
+            border-radius: 20px;
+            color: #ffffff;
+            .tipoProducto {
+                width: max-content;
+            }
+            .btnDiv {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: center;
+                .button {
+                    margin: 10px;
+                    background-color: #696868;
+                    width: auto;
+                    padding: 10px; 
+                }
+                    
+                .button:hover {
+                    transform: none;
+                    background-color: #f18787; }
+            }
+            
+          }
+      }
+
+      /*Media queries-------------------------------------- */ 
+
+      @media screen and (max-width: 1400px) {
+        /*Main*/
+
+        .categorias {
+            .button {
+            width: 250px;
+            }
+        }
+
+       /*ARTICLE- Novedades*/ 
+
+       .novedades {
+            .card-novedades {
+                width: 340px;
+                height: 220px;
+            }
+            .button {
+                margin-bottom: $margin;
+            }
+        }
+
+        /* ARTICLE- Testimonios*/
+        .bloque-testimonios .card-testimonios {
+            height: 350px;
+        }
+
+        /*PRODUCTOS*/ 
+
+        .accordion-item {
+            margin-right: 0;
+            width: 200px;
+         }
+
+        .galeriaItems {
+            width: 200px;
+    }
+         
+    /* CONTACTO */ 
+
+    .contacto .subtitulo2, .descuento .subtitulo2 {
+        font-size: 25px;
+    }
+}
+    
+     
+     @media screen and (max-width: 1200px) {
+         
+         /*HOME -Main*/
+
+         .categorias {
+            .button {
+            width: 220px;
+            }
+        }
+
+       /*ARTICLE- Novedades*/ 
+
+       .novedades {
+            .card-novedades {
+                width: 280px;
+                height: 270px;
+            }
+            .button {
+                margin-bottom: $margin;
+            }
+        }
+
+        /* ARTICLE- Testimonios*/
+
+        .bloque-testimonios {
+            .card-testimonios {
+                height: 380px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+
+        /*NOSOTROS*/
+
+        .nosotros-img {
+            display: none;
+        }
+
+        /*DESCARGAS*/ 
+        .suscripcion .button {
+            margin-left: 40%;
+        }
+
+        /* CONTACTO */ 
+
+        .contacto {
+            .subtitulo2 {
+                text-align: center;
+                grid-area: subtitulo;
+            }
+            .mediosContacto {
+                display: block;
+                .email, .whats, .horario {
+                    text-align: center;
+                }
+                .horario {
+                    margin-bottom: $margin;
+                }
+                .form {
+                    margin-left: 15%;
+                    } 
+            }
+        }
+        
+            .descuento {
+                margin: 2*$margin $margin $margin 0;
+                p {
+                    text-align: center;
+                }
+            }
+
+       }
+     
+       
+     @media screen and (max-width: 992px) {
+
+        .subtitulo2 {
+            font-size: 25px;
+        }
+        
+        /*HOME - Main - Categorias*/ 
+
+        .categorias {
+            flex-wrap: wrap;
+            .button {
+            margin: $margin;
+            }
+        }
+
+        /*ARTICLE- Novedades*/ 
+
+        .novedades {
+            flex-wrap: wrap;
+            .card-novedades {
+                width: 600px;
+                height: 160px;
+                .subtitulo3 {
+                    font-size: 20px;
+                }
+                p {
+                    font-size: 16px;
+                }
+            }
+            .button {
+                margin-bottom: $margin;
+            }
+        }
+
+        /* ARTICLE- Testimonios*/
+
+        .articulo-testimonios {
+            .subtitulo2 {
+                font-size: 25px;
+                text-align: center;
+            }
+            .bloque-testimonios {
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        /*DESCARGAS*/ 
+        .suscripcion .button {
+            margin-left: 35%;
+        }
+        .descargas-contenido {
+            display: block;
+            .subtitulo2 {
+                width: 100%;
+                text-align: center;
+            }
+            .bloque-contenido {
+                width: 100%;
+                height: 400px;
+            }
+        }
+
+        /* CONTACTO */ 
+
+        .contacto {
+            .mediosContacto {
+                .form {
+                    margin-left: 0%;
+                    } 
+            }
+        }
+        .newsletter {
+            height: 180px;
+            div {
+                font-size: 25px;
+            }
+            .button {
+                margin-left: 40%;
+            }
+        }
+    }
+     
+     @media screen and (max-width: 768px) {
+        
+        /*HOME - Main - Categorias*/ 
+
+        .categorias {
+            .button {
+                width: 210px;
+                font-size: 18px;
+            }
+        }
+
+        /*ARTICLE- Novedades*/ 
+
+        .novedades {
+            .card-novedades {
+                width: 500px;
+            }
+        }
+
+        /* ARTICLE- Testimonios*/
+
+        .bloque-testimonios {
+            display:none;
+        }
+
+        .testimoniosmax768 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: $gris;
+            border-radius: $margin;
+            margin: $margin;
+            img {
+                margin: $margin;
+            }
+            p {
+                font-size: 16px;
+                color: $blanco;
+                margin-bottom: 0;
+                .max768 {
+                    margin-bottom: $margin;
+                }
+            }
+        }
+
+        /*PRODUCTOS*/ 
+
+        .acordeon768 {
+            display: block;
+            margin: 0px 10px 20px 30%;
+            .acordeonItem {
+                padding: $margin;
+                transition: transform 1s;
+                font-family: $fuentePpal;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 20px;
+            }
+        }
+
+        .acordeon {
+            display: none;
+        }
+
+        .galeriaNav {
+            .ordenar, .paginacion {
+                display: none;
+            }
+        }
+        .galeriaProductos {
+            justify-content: center;
+            .galeriaItems {
+                width: 150px;
+            }
+        }
+        
+
+        /* CONTACTO */ 
+
+
+        .contacto {
+            .subtitulo2 {
+                font-size: 20px;
+            }
+            .mediosContacto {
+                .email, .whats, .horario {
+                    font-size: 16px;
+                }
+            }
+            .form {
+                margin-left: 0%;
+                width: 500px;
+                .form-field .label {
+                    font-size: 16px;
+                }
+            } 
+        }
+        .descuento {
+            .subtitulo2 {
+                font-size: 20px;
+            }
+            p, li {
+                font-size: 16px;
+            }
+        }
+        .newsletter {
+            height: 220px;
+            div {
+                font-size: 25px;
+            }
+            .button {
+                margin-left: 38%;
+            }
+        }
+
+     }
+    

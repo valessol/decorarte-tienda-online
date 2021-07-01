@@ -1,0 +1,854 @@
+@charset "UTF-8";
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/* Variables */
+/*HEADER-----------------------------*/
+header {
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr;
+  grid-template-areas: "logo . menuSecundario" "logo menuPrincipal menuPrincipal"; }
+  header .logo {
+    grid-area: logo;
+    width: 200px;
+    height: 200px;
+    padding: 0px;
+    margin: 20px 0 20px 0; }
+  header .menuSecundario {
+    grid-area: menuSecundario;
+    margin-top: 10px;
+    margin-bottom: 20px; }
+    header .menuSecundario a {
+      text-decoration: none;
+      color: #252525; }
+  header .topnav {
+    grid-area: menuPrincipal; }
+
+.topnav {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 20px; }
+  .topnav div {
+    display: inline-block;
+    position: relative; }
+    .topnav div a {
+      display: inline-block;
+      color: #252525;
+      text-align: center;
+      text-decoration: none;
+      font-family: "Montserrat" sans-serif;
+      font-size: 17px;
+      padding: 10px 20px 10px 20px; }
+    .topnav div a:hover {
+      background-color: #252525;
+      color: #ffffff;
+      text-decoration: none; }
+    .topnav div .active {
+      font-weight: bold; }
+    .topnav div .icon {
+      display: none; }
+
+.dropdown {
+  display: inline-block; }
+  .dropdown .dropbtn {
+    display: inline-block;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #252525;
+    padding: 10px 20px 10px 20px;
+    margin: 0; }
+  .dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #252525;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1; }
+    .dropdown .dropdown-content a {
+      color: #ffffff;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left; }
+    .dropdown .dropdown-content a:hover {
+      background-color: #ffffff;
+      color: #252525; }
+
+.dropdown:hover .dropbtn {
+  background-color: #252525;
+  color: white; }
+
+.dropdown:hover .dropdown-content {
+  display: block; }
+
+/*Media Queries*/
+@media screen and (max-width: 1200px) {
+  .topnav div a {
+    padding: 10px; } }
+
+@media screen and (max-width: 992px) {
+  header {
+    grid-template-columns: 1fr;
+    grid-template-areas: "logo" "menuPrincipal"; }
+    header .logo {
+      width: 150px;
+      height: 150px;
+      justify-self: center;
+      margin-bottom: 0; }
+    header .menuSecundario {
+      display: none; }
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none; }
+  .topnav a.icon {
+    float: right;
+    display: block;
+    width: 50px; }
+  .topnav .active {
+    font-weight: lighter; } }
+
+@media screen and (max-width: 992px) {
+  .topnav.responsive {
+    position: relative; }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0; }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left; }
+  .topnav.responsive .dropdown {
+    float: none; }
+  .topnav.responsive .dropdown-content {
+    position: relative; }
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left; } }
+
+/* FOOTER -------------------------------*/
+footer {
+  background-color: #252525; }
+  footer .contenidoFooter {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    justify-items: flex-start;
+    color: #ffffff;
+    margin-top: 20px;
+    padding: 20px;
+    font-family: "Montserrat" sans-serif; }
+    footer .contenidoFooter .menuFooter {
+      list-style-type: none; }
+      footer .contenidoFooter .menuFooter a {
+        text-decoration: none;
+        color: #ffffff; }
+      footer .contenidoFooter .menuFooter .redesSociales {
+        width: 40px;
+        height: 40px; }
+    footer .contenidoFooter .logoFooter {
+      width: 150px;
+      height: 150px; }
+
+@media screen and (max-width: 992px) {
+  footer .menufooter {
+    font-size: 14px; }
+  footer .logoFooter {
+    width: 100px;
+    height: 100px; } }
+
+@media screen and (max-width: 768px) {
+  footer .menufooter {
+    font-size: 12px; }
+    footer .menufooter .redesSociales {
+      width: 25px;
+      height: 25px; }
+  footer .logoFooter {
+    width: 100px;
+    height: 100px; } }
+
+/* Componentes - Titulos, subtitulos, botones---------------------*/
+/*Titulos - h1-----*/
+.titulo {
+  font-family: "Montserrat" sans-serif;
+  font-size: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 40px; }
+
+/*Subtitulos - h2-----*/
+.subtitulo2 {
+  font-family: "Montserrat" sans-serif;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  background-color: #ffffff;
+  margin-top: 20px;
+  margin-bottom: 40px; }
+
+/* Subtítulos - h3-----*/
+.subtitulo3 {
+  font-family: "Acme", sans-serif;
+  font-size: 25px;
+  text-align: center;
+  margin: 20px; }
+
+/*Parrafos---*/
+p {
+  font-family: "Montserrat" sans-serif;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px; }
+
+/*Botones*/
+.button {
+  color: white;
+  background-color: #252525;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: transform 1s;
+  font-family: "Montserrat" sans-serif; }
+
+.button:hover {
+  background-color: #f18787;
+  color: #252525;
+  border: none;
+  transform: scale(1.05); }
+
+/* Hero Image */
+.hero {
+  margin: 0 0 40px 0; }
+  .hero .hero-image {
+    height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; }
+    .hero .hero-image .hero-text {
+      text-align: center;
+      font-family: "Montserrat" sans-serif;
+      padding-top: 130px;
+      left: 50%;
+      color: white; }
+      .hero .hero-image .hero-text h1 {
+        font-size: 80px; }
+      .hero .hero-image .hero-text p {
+        font-size: 30px; }
+
+/* Formularios*/
+.form .form-field {
+  margin: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start; }
+  .form .form-field .label {
+    font-family: "Montserrat" sans-serif;
+    font-size: 18px;
+    padding-right: 20px;
+    padding-bottom: 10px; }
+  .form .form-field .input {
+    border: 1px solid #252525;
+    border-radius: 5px;
+    padding-left: 20px;
+    text-transform: capitalize;
+    width: 100%; }
+
+.form .form-check {
+  margin: 20px;
+  display: inline-block; }
+  .form .form-check input {
+    display: inline; }
+  .form .form-check div {
+    display: inline; }
+
+/* Media Queries*/
+@media screen and (max-width: 1400px) {
+  /* Hero Image */
+  .hero .hero-image .hero-text h1 {
+    font-size: 60px; } }
+
+@media screen and (max-width: 992px) {
+  /* Hero Image */
+  .hero .hero-image {
+    height: 250px; }
+    .hero .hero-image .hero-text {
+      padding-top: 80px; }
+      .hero .hero-image .hero-text h1 {
+        font-size: 40px; }
+      .hero .hero-image .hero-text p {
+        font-size: 20px; } }
+
+@media screen and (max-width: 768px) {
+  /* Hero Image */
+  .hero .hero-image {
+    height: 200px; }
+    .hero .hero-image .hero-text {
+      padding-top: 60px; }
+      .hero .hero-image .hero-text h1 {
+        font-size: 30px; }
+      .hero .hero-image .hero-text p {
+        font-size: 16px; } }
+
+/* Carrito---------------------------------------*/
+#carritoDeCompras {
+  display: block;
+  border-color: 15px solid #252525;
+  font-family: "Montserrat" sans-serif;
+  color: #252525; }
+  #carritoDeCompras h3 {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 20px; }
+  #carritoDeCompras h4 {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 16px; }
+  #carritoDeCompras p {
+    margin: 10px;
+    padding: 0;
+    text-align: left;
+    text-transform: capitalize;
+    font-size: 16px; }
+
+#refreshStock-1 {
+  display: none; }
+
+#refreshStock-2 {
+  display: none; }
+
+#refreshStock-3 {
+  display: none; }
+
+#refreshStock-4 {
+  display: none; }
+
+#refreshStock-5 {
+  display: none; }
+
+#refreshStock-6 {
+  display: none; }
+
+#refreshStock-7 {
+  display: none; }
+
+#refreshStock-8 {
+  display: none; }
+
+#refreshStock-9 {
+  display: none; }
+
+#refreshStock-10 {
+  display: none; }
+
+#refreshStock-11 {
+  display: none; }
+
+#refreshStock-12 {
+  display: none; }
+
+#refreshStock-13 {
+  display: none; }
+
+#refreshStock-14 {
+  display: none; }
+
+#refreshStock-15 {
+  display: none; }
+
+#refreshStock-16 {
+  display: none; }
+
+/* Mapa de Sitio --------------------------*/
+.sitemap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .sitemap .sitemapPage div {
+    font-size: 20px;
+    font-weight: bold; }
+  .sitemap .sitemapPage ul li a {
+    color: #252525; }
+  .sitemap .sitemapPage ul li:hover a {
+    color: #f7adad; }
+
+/*HOME-----------------------------------------*/
+/* Hero Image */
+.home-hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url("../img/ppal.jpg"); }
+
+/*Main*/
+.categorias {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin-bottom: 40px; }
+  .categorias .button {
+    width: 300px;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: x-large;
+    font-weight: bold; }
+
+/* ARTICLE- Testimonios*/
+.articulo-testimonios, .descargas-contenido {
+  margin: 20px 0 20px 0; }
+  .articulo-testimonios .subtitulo2, .descargas-contenido .subtitulo2 {
+    text-align: left;
+    padding-left: 20px; }
+  .articulo-testimonios .bloque-testimonios, .descargas-contenido .bloque-testimonios, .descargas-contenido .bloque-contenido {
+    background-color: #252525;
+    border-radius: 20px; }
+    .articulo-testimonios .bloque-testimonios .testimonios img, .descargas-contenido .bloque-testimonios .testimonios img, .descargas-contenido .bloque-contenido .testimonios img {
+      margin: 20px; }
+    .articulo-testimonios .bloque-testimonios .card-testimonios, .descargas-contenido .bloque-testimonios .card-testimonios, .descargas-contenido .bloque-contenido .card-testimonios {
+      background-color: #252525;
+      height: 300px; }
+    .articulo-testimonios .bloque-testimonios p, .descargas-contenido .bloque-testimonios p, .descargas-contenido .bloque-contenido p {
+      margin-bottom: 0; }
+
+.testimoniosmax768 {
+  display: none; }
+
+/*ARTICLE- Novedades*/
+.novedades {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin: 40px; }
+  .novedades .card-novedades {
+    border: solid 2px #252525;
+    border-radius: 20px;
+    width: 400px;
+    height: 200px; }
+  .novedades .button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold; }
+  .novedades button:hover {
+    transform: scale(0.95); }
+
+/* ------------------------Fin del HOME---------------*/
+/*NOSOTROS-------------------*/
+.nosotros-hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url("../img/Impresoras2.png"); }
+
+.nosotros {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: stretch;
+  margin-bottom: 20px;
+  margin-top: 40px; }
+
+/*-----------Fin de Nosotros----------*/
+/* PRODUCTOS--------------------------------*/
+.productos-hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url("../img/ppal.jpg"); }
+
+/*Galeria de productos*/
+.acordeon768 {
+  display: none; }
+
+.acordeon .acordeonItem {
+  padding: 20px;
+  transition: transform 1s;
+  font-family: "Montserrat" sans-serif;
+  text-transform: uppercase; }
+
+.acordeonItem:hover {
+  background-color: #f7adad;
+  color: #252525;
+  border: none; }
+
+.galeria {
+  margin-bottom: 20px; }
+  .galeria .galeriaNav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between; }
+    .galeria .galeriaNav .ordenar {
+      margin-bottom: 20px; }
+      .galeria .galeriaNav .ordenar a {
+        text-decoration: none;
+        color: #252525;
+        padding: 5px; }
+    .galeria .galeriaNav .paginacion .numeracion {
+      color: black; }
+  .galeria .galeriaProductos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly; }
+    .galeria .galeriaProductos .galeriaItems {
+      transition-duration: 0.3s;
+      transition-property: box-shadow, transform;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0);
+      width: 250px;
+      margin-bottom: 20px;
+      margin-left: 4px;
+      margin-right: 4px; }
+    .galeria .galeriaProductos .galeriaItemCard {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: flex-start; }
+      .galeria .galeriaProductos .galeriaItemCard .galeriaFondo {
+        background-color: #e7e3e3;
+        opacity: 100%; }
+      .galeria .galeriaProductos .galeriaItemCard .galeriaCard {
+        transform: none; }
+      .galeria .galeriaProductos .galeriaItemCard .galeriaTitulo {
+        font-family: "Montserrat" sans-serif;
+        font-size: 16px;
+        text-transform: uppercase; }
+      .galeria .galeriaProductos .galeriaItemCard .galeriaPrecio {
+        font-family: "Acme", sans-serif;
+        font-weight: bold; }
+      .galeria .galeriaProductos .galeriaItemCard .button {
+        border-radius: 5px;
+        padding: 0; }
+        .galeria .galeriaProductos .galeriaItemCard .button .linkButton {
+          width: 100%;
+          font-family: "Montserrat" sans-serif;
+          font-size: 14px;
+          color: #ffffff; }
+
+.galeriaItems:hover div {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transform: scale(1.05); }
+
+/*-----------------Fin de Productos---------------*/
+/*DESCARGAS--------------------------*/
+.descargas-hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url("../img/Receta.jpg"); }
+
+.suscripcion {
+  margin: 20px; }
+  .suscripcion p {
+    text-align: left;
+    margin: 0; }
+  .suscripcion .button {
+    padding: 10px;
+    margin: 40px;
+    text-align: center;
+    margin-left: 45%;
+    font-size: 20px;
+    font-weight: bold; }
+
+.descargas-contenido {
+  margin-top: 40px;
+  margin-bottom: 40px; }
+  .descargas-contenido p {
+    color: #ffffff;
+    text-align: left;
+    margin: 0; }
+  .descargas-contenido ul {
+    color: #ffffff; }
+
+/*--------------------Fin de descargas--------------------*/
+/* CONTACTO---------*/
+.contacto-hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url("../img/contacto.jpg"); }
+
+.contacto {
+  margin: 40px; }
+  .contacto .subtitulo2 {
+    text-align: left;
+    grid-area: subtitulo;
+    margin-bottom: 20px; }
+  .contacto .mediosContacto {
+    display: grid;
+    grid-template-columns: 600px, 600px;
+    grid-template-areas: "subtitulo form"   "email form" "whats form" "horario form" "descuento form"; }
+  .contacto .email {
+    grid-area: email;
+    font-size: 18px; }
+  .contacto .whats {
+    grid-area: whats;
+    font-size: 18px; }
+  .contacto .horario {
+    grid-area: horario;
+    font-size: 18px; }
+  .contacto .form {
+    grid-area: form;
+    margin: 0;
+    background-color: #252525;
+    width: 600px;
+    height: 650px;
+    padding: 20px;
+    border-radius: 20px;
+    color: #ffffff; }
+    .contacto .form .motivo {
+      width: max-content; }
+    .contacto .form .button {
+      margin-left: 45%;
+      background-color: #696868;
+      width: 100px;
+      padding: 10px; }
+    .contacto .form .button:hover {
+      transform: none;
+      background-color: #f18787; }
+
+.descuento {
+  grid-area: descuento;
+  margin: 20px 20px 20px 0; }
+  .descuento .subtitulo2 {
+    margin-bottom: 20px; }
+  .descuento p {
+    text-align: left;
+    margin-bottom: 0; }
+  .descuento li {
+    font-size: 18px; }
+
+.newsletter {
+  margin: 40px 0 40px 0;
+  width: 100%;
+  height: 200px;
+  background-color: #f18787;
+  border-radius: 20px;
+  animation-name: suscription;
+  animation-duration: 5s; }
+  .newsletter div {
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center; }
+  .newsletter .button {
+    padding: 10px;
+    margin: 20px;
+    text-align: center;
+    margin-left: 45%;
+    font-size: 20px;
+    font-weight: bold; }
+  .newsletter .button:hover {
+    background-color: #696868;
+    color: #ffffff; }
+
+@keyframes suscription {
+  from {
+    background-color: #252525; }
+  to {
+    background-color: #f18787; } }
+
+/*CARGA DE PRODUCTOS*/
+.cargaProductos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 40px; }
+  .cargaProductos .subtitulo2 {
+    margin-bottom: 20px; }
+  .cargaProductos .form {
+    background-color: #252525;
+    width: 600px;
+    height: auto;
+    padding: 20px;
+    border-radius: 20px;
+    color: #ffffff; }
+    .cargaProductos .form .tipoProducto {
+      width: max-content; }
+    .cargaProductos .form .btnDiv {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center; }
+      .cargaProductos .form .btnDiv .button {
+        margin: 10px;
+        background-color: #696868;
+        width: auto;
+        padding: 10px; }
+      .cargaProductos .form .btnDiv .button:hover {
+        transform: none;
+        background-color: #f18787; }
+
+/*Media queries-------------------------------------- */
+@media screen and (max-width: 1400px) {
+  /*Main*/
+  .categorias .button {
+    width: 250px; }
+  /*ARTICLE- Novedades*/
+  .novedades .card-novedades {
+    width: 340px;
+    height: 220px; }
+  .novedades .button {
+    margin-bottom: 20px; }
+  /* ARTICLE- Testimonios*/
+  .bloque-testimonios .card-testimonios, .descargas-contenido .bloque-contenido .card-testimonios {
+    height: 350px; }
+  /*PRODUCTOS*/
+  .accordion-item {
+    margin-right: 0;
+    width: 200px; }
+  .galeriaItems {
+    width: 200px; }
+  /* CONTACTO */
+  .contacto .subtitulo2, .descuento .subtitulo2 {
+    font-size: 25px; } }
+
+@media screen and (max-width: 1200px) {
+  /*HOME -Main*/
+  .categorias .button {
+    width: 220px; }
+  /*ARTICLE- Novedades*/
+  .novedades .card-novedades {
+    width: 280px;
+    height: 270px; }
+  .novedades .button {
+    margin-bottom: 20px; }
+  /* ARTICLE- Testimonios*/
+  .bloque-testimonios .card-testimonios, .descargas-contenido .bloque-contenido .card-testimonios {
+    height: 380px; }
+  .bloque-testimonios p, .descargas-contenido .bloque-contenido p {
+    font-size: 16px; }
+  /*NOSOTROS*/
+  .nosotros-img {
+    display: none; }
+  /*DESCARGAS*/
+  .suscripcion .button {
+    margin-left: 40%; }
+  /* CONTACTO */
+  .contacto .subtitulo2 {
+    text-align: center;
+    grid-area: subtitulo; }
+  .contacto .mediosContacto {
+    display: block; }
+    .contacto .mediosContacto .email, .contacto .mediosContacto .whats, .contacto .mediosContacto .horario {
+      text-align: center; }
+    .contacto .mediosContacto .horario {
+      margin-bottom: 20px; }
+    .contacto .mediosContacto .form {
+      margin-left: 15%; }
+  .descuento {
+    margin: 40px 20px 20px 0; }
+    .descuento p {
+      text-align: center; } }
+
+@media screen and (max-width: 992px) {
+  .subtitulo2 {
+    font-size: 25px; }
+  /*HOME - Main - Categorias*/
+  .categorias {
+    flex-wrap: wrap; }
+    .categorias .button {
+      margin: 20px; }
+  /*ARTICLE- Novedades*/
+  .novedades {
+    flex-wrap: wrap; }
+    .novedades .card-novedades {
+      width: 600px;
+      height: 160px; }
+      .novedades .card-novedades .subtitulo3 {
+        font-size: 20px; }
+      .novedades .card-novedades p {
+        font-size: 16px; }
+    .novedades .button {
+      margin-bottom: 20px; }
+  /* ARTICLE- Testimonios*/
+  .articulo-testimonios .subtitulo2, .descargas-contenido .subtitulo2 {
+    font-size: 25px;
+    text-align: center; }
+  .articulo-testimonios .bloque-testimonios p, .descargas-contenido .bloque-testimonios p, .descargas-contenido .bloque-contenido p {
+    font-size: 16px; }
+  /*DESCARGAS*/
+  .suscripcion .button {
+    margin-left: 35%; }
+  .descargas-contenido {
+    display: block; }
+    .descargas-contenido .subtitulo2 {
+      width: 100%;
+      text-align: center; }
+    .descargas-contenido .bloque-contenido {
+      width: 100%;
+      height: 400px; }
+  /* CONTACTO */
+  .contacto .mediosContacto .form {
+    margin-left: 0%; }
+  .newsletter {
+    height: 180px; }
+    .newsletter div {
+      font-size: 25px; }
+    .newsletter .button {
+      margin-left: 40%; } }
+
+@media screen and (max-width: 768px) {
+  /*HOME - Main - Categorias*/
+  .categorias .button {
+    width: 210px;
+    font-size: 18px; }
+  /*ARTICLE- Novedades*/
+  .novedades .card-novedades {
+    width: 500px; }
+  /* ARTICLE- Testimonios*/
+  .bloque-testimonios, .descargas-contenido .bloque-contenido {
+    display: none; }
+  .testimoniosmax768 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #252525;
+    border-radius: 20px;
+    margin: 20px; }
+    .testimoniosmax768 img {
+      margin: 20px; }
+    .testimoniosmax768 p {
+      font-size: 16px;
+      color: #ffffff;
+      margin-bottom: 0; }
+      .testimoniosmax768 p .max768 {
+        margin-bottom: 20px; }
+  /*PRODUCTOS*/
+  .acordeon768 {
+    display: block;
+    margin: 0px 10px 20px 30%; }
+    .acordeon768 .acordeonItem {
+      padding: 20px;
+      transition: transform 1s;
+      font-family: "Montserrat" sans-serif;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 20px; }
+  .acordeon {
+    display: none; }
+  .galeriaNav .ordenar, .galeriaNav .paginacion {
+    display: none; }
+  .galeriaProductos {
+    justify-content: center; }
+    .galeriaProductos .galeriaItems {
+      width: 150px; }
+  /* CONTACTO */
+  .contacto .subtitulo2 {
+    font-size: 20px; }
+  .contacto .mediosContacto .email, .contacto .mediosContacto .whats, .contacto .mediosContacto .horario {
+    font-size: 16px; }
+  .contacto .form {
+    margin-left: 0%;
+    width: 500px; }
+    .contacto .form .form-field .label {
+      font-size: 16px; }
+  .descuento .subtitulo2 {
+    font-size: 20px; }
+  .descuento p, .descuento li {
+    font-size: 16px; }
+  .newsletter {
+    height: 220px; }
+    .newsletter div {
+      font-size: 25px; }
+    .newsletter .button {
+      margin-left: 38%; } }

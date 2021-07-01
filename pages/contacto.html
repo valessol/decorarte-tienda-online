@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decorarte | Contacto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/bb872be55d.js"></script>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="../img/Logo 100x100.png" type="image/png" sizes="16x16">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Caja principal del header -->
+        <header>
+            <!-- Logo -->
+            <img class="logo" src="../img/Logo 300x300.png" alt="Decorarte Accesorios Impresos">
+            <!-- Menu secundario -->
+                <div class="menuSecundario">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Mi cuenta</a>
+                        </li>
+                      </ul>
+                </div>
+                
+                <!-- Menu principal -->
+                <nav class="topnav" id="myTopnav">
+                    <hr>
+                    <div>
+                        <a href="../index.html">Inicio</a>
+                        <a href="nosotros.html">Nosotros</a>
+                        <div class="dropdown">
+                            <a class="dropbtn" href="#">Productos 
+                            </a>
+                            <div class="dropdown-content">
+                                <a href="productos.html">Cortantes</a>
+                                <a href="productos.html">Cake toppers</a>
+                                <a href="productos.html">Sellos</a>
+                                <a href="productos.html">Herramientas</a>
+                            </div>
+                        </div> 
+                        <a href="descargas.html">Receta</a>
+                        <a href="contacto.html" class="active">Contacto</a>
+                        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+                    </div>
+                    <hr>
+                </nav>
+        </header>
+
+        <!-- Imagen principal -->
+        <section class="hero">
+            <div class="contacto-hero-image hero-image img-fluid">
+                <div class="hero-text">
+                  <h1>Contactanos</h1>
+                </div>
+              </div>
+        </section>
+
+        <hr>
+
+        <main class="contacto">
+            <!-- Formulario de contacto -->
+        
+                    <div class="mediosContacto">
+                        <h2 class="subtitulo2">
+                            Nuestros medios de contacto:
+                        </h2>
+                        <div class="email">
+                            Email: decorarteaccesoriosimpresos@gmail.com
+                        </div>
+                        <div class="whats">
+                            Whatsapp: +54-11-7361-1513
+                        </div>
+                        <div class="horario">
+                            Horario de atención: Lunes a viernes de 10 a 18hs
+                        </div>
+                        <form class="form">
+                            <div class="form-field">
+                                <label for="nombre" class="label">Nombre</label>
+                                <input type="text" name="nombre" class="input" value="nombre">
+                            </div>
+                            <div class="form-field">
+                                <label for="email" class="label">E-mail</label>
+                                <input type="text" name="email" class="input" value="email">
+                            </div>
+                            <div class="form-field">
+                                <label for="motivo" class="label">Seleccione motivo</label>
+                                <select class="motivo" name="motivo">
+                                    <option value="consulta">Consulta</option>
+                                    <option value="presupuesto">Pedido de presupuesto</option>
+                                    <option value="sugerencia">Sugerencia</option>
+                                    <option value="testimonio">Testimonio</option>
+                                </select>
+                            </div>
+                            <div class="form-field">
+                                <label for="comentario" class="label">Comentarios</label>
+                                <textarea name="comentario" cols="30" rows="5">Deja tu comentario aquí</textarea>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" name="acepta" value="1" />
+                                Acepto suscribirme al newsletter
+                            </div>    
+                            <div class="form-field">
+                                <button type="submit" class="btn button">Enviar</button>
+                            </div>
+                        </form>
+                        <div class="descuento">
+                            <h2 class="subtitulo2">
+                                ¿Has utilizado nuestros productos?
+                            </h2>
+                            <p>Comparte tu trabajo con nosotros y obtén un 10%OFF en toda la tienda en compras superiores a $300.</p>
+                            <p>¿Cómo? Hay dos formas en que puedes obtener este descuento:</p>
+                            <div>
+                                <ol>
+                                    <li>Sube tu foto a tus redes sociales (Facebook o Instagram) y ¡etiquetanos!</li>
+                                    <li>Comparte tu testimonio sobre tu experiencia utilizando nuestros productos, o cualquier cosa que desees destacar o sugerir sobre nuestra atención, en el formulario a continuación.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+        </main>
+
+        <!-- llamado a suscripcion -->
+        <section>
+            <div class="newsletter">
+                <div>¿Deseas estar al tanto de las novedades y promociones?</div>
+                <button type="button" class="btn button" data-bs-toggle="modal" data-bs-target="#suscriptionModal">
+                    ¡Suscribite!
+                </button>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="suscriptionModal" tabindex="-1" aria-labelledby="suscriptionModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialig-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Suscribite</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form">
+                                <div class="form-field">
+                                    <label for="nombre" class="label">Nombre</label>
+                                    <input type="text" name="nombre" class="input" value="nombre">
+                                </div>
+                                <div class="form-field">
+                                    <label for="email" class="label">E-mail</label>
+                                    <input type="text" name="email" class="input" value="email">
+                                </div>  
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Me arrepentí</button>
+                            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#confirmModal">Suscribirme</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialig-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Gracias por suscribirte</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Tu solicitud ha sido enviada exitosamente.
+                            Puedes dar click afuera para continuar navegando.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+        <footer>
+            <ul class="menuFooter">
+                <li>
+                    <a href="../index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="nosotros.html">Nosotros</a>
+                </li>
+                <li>
+                    <a href="productos.html">Productos</a>
+                </li>
+                <li>
+                    <a href="descargas.html">Receta</a>
+                </li>
+                <li>
+                    <a href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+            <ul class="menuFooter">
+                <li>
+                    <a href="#">Envíos</a>
+                </li>
+                <li>
+                    <a href="#">Medios de Pago</a>
+                </li>
+                <li>
+                    <a href="#">Cómo comprar</a>
+                </li>
+                <li>
+                    <a href="#">Preguntas Frecuentes</a>
+                </li>
+                <li>
+                    <a href="sitemap.html">Mapa de Sitio</a>
+                </li>
+            </ul>
+            <ul class="menuFooter">
+                <li>
+                    Florencio Varela, Bs. As., Argentina
+                </li>
+                <li>
+                    Whatsapp: +5411-7361-1513
+                </li>
+                <li>
+                    <img class="redesSociales" src="../img/facebook.svg" alt="Facebook">
+                    <img class="redesSociales" src="../img/instagram.svg" alt="Instagram">
+                    <img class="redesSociales" src="../img/whatsapp.svg" alt="Whatsapp">
+                </li>
+            </ul>
+            <div>
+                <img class="logoFooter" src="../img/Logo 300x300.png" alt="Decorarte Accesorios Impresos">
+            </div>
+        </footer>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script   script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+</body>
+</html>

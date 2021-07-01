@@ -1,0 +1,26 @@
+{
+  "name": "decorarte-proyectofinaljavascript",
+  "version": "1.0.0",
+  "description": "Proyecto final del curso de Javascript en Coderhouse - Junio 2021",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.9"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/style.scss css/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "keywords": [
+    "javascript",
+    "desarrollo",
+    "web",
+    "front",
+    "end",
+    "developer"
+  ],
+  "author": "Valeria Silveira",
+  "license": "ISC"
+}

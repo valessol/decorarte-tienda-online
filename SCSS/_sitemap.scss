@@ -1,0 +1,22 @@
+
+
+
+
+.sitemap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .sitemapPage {
+        div {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        ul li a {
+            color: $gris;
+        }
+        ul li:hover a {
+            color:  rgb(247, 173, 173);
+        }
+    }
+}
