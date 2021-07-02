@@ -18,21 +18,13 @@ const productosHTML = (product) => `<div class="galeriaItems">
 
 
 //Mostrar productos del carrito
-const carritoHTML = (prod) => {
-    // `<div class="col-9">
-    //     <p>${prod.nombre}</p>
-    //     <p>CANT.:${prod.cantidad}</p>
-    // </div>
-    // <div class="col-3">
-    //     <p>$ ${prod.precio}</p>
-    // </div><hr>`
+const carritoHTML = (prod) =>
+    `<p class="cardTitle">${prod.nombre}</p>
+    <p>CANT.: ${prod.cantidad}</p>
+    <p>$ ${prod.precio}</p>
+    <hr>`
 
 
-
-    $('#carritoNombre').html(`${prod.nombre}`);
-    $('#carritoCantidad').html(`CANT.:${prod.cantidad}`);
-    $('#carritoPrecio').html(`$ ${prod.precio}`);
-}
 
 // const mostrarProdenCarrrito = () {
 //     let productosAMostrar = [];

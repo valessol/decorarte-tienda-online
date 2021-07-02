@@ -1,5 +1,6 @@
 //Cargar el JSON en la base de datos que será el local storage
 const baseDeDatosProductos = () => {
+    
     $.getJSON( "../Datos/productos.json", function(products) { 
 
         //Convierto a string el JSON

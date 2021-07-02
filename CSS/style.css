@@ -206,7 +206,7 @@ footer {
   margin: 20px; }
 
 /*Parrafos---*/
-p {
+p, #visualizarCarrito #carrito p {
   font-family: "Montserrat" sans-serif;
   font-size: 18px;
   text-align: center;
@@ -246,7 +246,7 @@ p {
       color: white; }
       .hero .hero-image .hero-text h1 {
         font-size: 80px; }
-      .hero .hero-image .hero-text p {
+      .hero .hero-image .hero-text p, .hero .hero-image .hero-text #visualizarCarrito #carrito p, #visualizarCarrito #carrito .hero .hero-image .hero-text p {
         font-size: 30px; }
 
 /* Formularios*/
@@ -289,7 +289,7 @@ p {
       padding-top: 80px; }
       .hero .hero-image .hero-text h1 {
         font-size: 40px; }
-      .hero .hero-image .hero-text p {
+      .hero .hero-image .hero-text p, .hero .hero-image .hero-text #visualizarCarrito #carrito p, #visualizarCarrito #carrito .hero .hero-image .hero-text p {
         font-size: 20px; } }
 
 @media screen and (max-width: 768px) {
@@ -300,29 +300,29 @@ p {
       padding-top: 60px; }
       .hero .hero-image .hero-text h1 {
         font-size: 30px; }
-      .hero .hero-image .hero-text p {
+      .hero .hero-image .hero-text p, .hero .hero-image .hero-text #visualizarCarrito #carrito p, #visualizarCarrito #carrito .hero .hero-image .hero-text p {
         font-size: 16px; } }
 
 /* Carrito---------------------------------------*/
-#carritoDeCompras {
+#visualizarCarrito {
   display: block;
-  border-color: 15px solid #252525;
+  background-color: #e7e3e3;
   font-family: "Montserrat" sans-serif;
   color: #252525; }
-  #carritoDeCompras h3 {
+  #visualizarCarrito h3 {
+    padding: 10px;
     font-weight: bold;
     font-size: 24px;
     margin-bottom: 20px; }
-  #carritoDeCompras h4 {
-    text-transform: uppercase;
-    font-weight: bolder;
-    font-size: 16px; }
-  #carritoDeCompras p {
-    margin: 10px;
+  #visualizarCarrito p, #visualizarCarrito #carrito p {
+    margin: 0;
     padding: 0;
+    padding-left: 10px;
     text-align: left;
     text-transform: capitalize;
     font-size: 16px; }
+  #visualizarCarrito #carrito p .cardTitle {
+    font-weight: bold; }
 
 #refreshStock-1 {
   display: none; }
@@ -422,7 +422,7 @@ p {
     .articulo-testimonios .bloque-testimonios .card-testimonios, .descargas-contenido .bloque-testimonios .card-testimonios, .descargas-contenido .bloque-contenido .card-testimonios {
       background-color: #252525;
       height: 300px; }
-    .articulo-testimonios .bloque-testimonios p, .descargas-contenido .bloque-testimonios p, .descargas-contenido .bloque-contenido p {
+    .articulo-testimonios .bloque-testimonios p, .descargas-contenido .bloque-testimonios p, .descargas-contenido .bloque-contenido p, .articulo-testimonios .bloque-testimonios #visualizarCarrito #carrito p, #visualizarCarrito #carrito .articulo-testimonios .bloque-testimonios p, .descargas-contenido .bloque-testimonios #visualizarCarrito #carrito p, #visualizarCarrito #carrito .descargas-contenido .bloque-testimonios p, .descargas-contenido .bloque-contenido #visualizarCarrito #carrito p, #visualizarCarrito #carrito .descargas-contenido .bloque-contenido p {
       margin-bottom: 0; }
 
 .testimoniosmax768 {
@@ -548,7 +548,7 @@ p {
 
 .suscripcion {
   margin: 20px; }
-  .suscripcion p {
+  .suscripcion p, .suscripcion #visualizarCarrito #carrito p, #visualizarCarrito #carrito .suscripcion p {
     text-align: left;
     margin: 0; }
   .suscripcion .button {
@@ -562,7 +562,7 @@ p {
 .descargas-contenido {
   margin-top: 40px;
   margin-bottom: 40px; }
-  .descargas-contenido p {
+  .descargas-contenido p, .descargas-contenido #visualizarCarrito #carrito p, #visualizarCarrito #carrito .descargas-contenido p {
     color: #ffffff;
     text-align: left;
     margin: 0; }
@@ -618,7 +618,7 @@ p {
   margin: 20px 20px 20px 0; }
   .descuento .subtitulo2 {
     margin-bottom: 20px; }
-  .descuento p {
+  .descuento p, .descuento #visualizarCarrito #carrito p, #visualizarCarrito #carrito .descuento p {
     text-align: left;
     margin-bottom: 0; }
   .descuento li {
@@ -722,7 +722,7 @@ p {
   /* ARTICLE- Testimonios*/
   .bloque-testimonios .card-testimonios, .descargas-contenido .bloque-contenido .card-testimonios {
     height: 380px; }
-  .bloque-testimonios p, .descargas-contenido .bloque-contenido p {
+  .bloque-testimonios p, .descargas-contenido .bloque-contenido p, .bloque-testimonios #visualizarCarrito #carrito p, #visualizarCarrito #carrito .bloque-testimonios p, .descargas-contenido .bloque-contenido #visualizarCarrito #carrito p, #visualizarCarrito #carrito .descargas-contenido .bloque-contenido p {
     font-size: 16px; }
   /*NOSOTROS*/
   .nosotros-img {
@@ -744,7 +744,7 @@ p {
       margin-left: 15%; }
   .descuento {
     margin: 40px 20px 20px 0; }
-    .descuento p {
+    .descuento p, .descuento #visualizarCarrito #carrito p, #visualizarCarrito #carrito .descuento p {
       text-align: center; } }
 
 @media screen and (max-width: 992px) {
@@ -763,7 +763,7 @@ p {
       height: 160px; }
       .novedades .card-novedades .subtitulo3 {
         font-size: 20px; }
-      .novedades .card-novedades p {
+      .novedades .card-novedades p, .novedades .card-novedades #visualizarCarrito #carrito p, #visualizarCarrito #carrito .novedades .card-novedades p {
         font-size: 16px; }
     .novedades .button {
       margin-bottom: 20px; }
@@ -771,7 +771,7 @@ p {
   .articulo-testimonios .subtitulo2, .descargas-contenido .subtitulo2 {
     font-size: 25px;
     text-align: center; }
-  .articulo-testimonios .bloque-testimonios p, .descargas-contenido .bloque-testimonios p, .descargas-contenido .bloque-contenido p {
+  .articulo-testimonios .bloque-testimonios p, .descargas-contenido .bloque-testimonios p, .descargas-contenido .bloque-contenido p, .articulo-testimonios .bloque-testimonios #visualizarCarrito #carrito p, #visualizarCarrito #carrito .articulo-testimonios .bloque-testimonios p, .descargas-contenido .bloque-testimonios #visualizarCarrito #carrito p, #visualizarCarrito #carrito .descargas-contenido .bloque-testimonios p, .descargas-contenido .bloque-contenido #visualizarCarrito #carrito p, #visualizarCarrito #carrito .descargas-contenido .bloque-contenido p {
     font-size: 16px; }
   /*DESCARGAS*/
   .suscripcion .button {
@@ -814,11 +814,11 @@ p {
     margin: 20px; }
     .testimoniosmax768 img {
       margin: 20px; }
-    .testimoniosmax768 p {
+    .testimoniosmax768 p, .testimoniosmax768 #visualizarCarrito #carrito p, #visualizarCarrito #carrito .testimoniosmax768 p {
       font-size: 16px;
       color: #ffffff;
       margin-bottom: 0; }
-      .testimoniosmax768 p .max768 {
+      .testimoniosmax768 p .max768, .testimoniosmax768 #visualizarCarrito #carrito p .max768, #visualizarCarrito #carrito .testimoniosmax768 p .max768 {
         margin-bottom: 20px; }
   /*PRODUCTOS*/
   .acordeon768 {
@@ -851,7 +851,7 @@ p {
       font-size: 16px; }
   .descuento .subtitulo2 {
     font-size: 20px; }
-  .descuento p, .descuento li {
+  .descuento p, .descuento #visualizarCarrito #carrito p, #visualizarCarrito #carrito .descuento p, .descuento li {
     font-size: 16px; }
   .newsletter {
     height: 220px; }
