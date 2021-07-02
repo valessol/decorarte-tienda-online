@@ -16,20 +16,49 @@ const agregarAlCarrito = (e) => {
     if (carrito === null) {
         carrito = [];
         carrito.push(new ProductsInCart (productsJSON[prodPosition].id, productsJSON[prodPosition].nombre, productsJSON[prodPosition].precio, 1));
-        console.log("carrito con producto nuevo", carrito)
+        console.log("primer producto del carrito", carrito)
     } else {
         carrito.push(new ProductsInCart (productsJSON[prodPosition].id, productsJSON[prodPosition].nombre, productsJSON[prodPosition].precio, 1));
+        console.log("nuevo producto al carrito", carrito)
     }
+
     
-    carrito.forEach (element => {
-        element.id == productsJSON[prodPosition].id ? element.cantidad += 1 : element.cantidad = 1;
-    });
-    console.log("carrito con producto repetido", carrito)
+    //if (carrito.every (carrito.condicion)) {
+
+    //}
+    
+    //cartPosition.pop();
+    //console.log ("posicion unica del producto duplicado", cartPosition);
+    //
+    //console.log("carrito con producto repetido", carrito)
 
     
     setSessionStorage(cartStorage, aString(carrito));
     //Actualizar la cantidad de productos
     productsJSON[prodPosition].stock -= 1;
+
+    unique = carrito
+     .map(e => e.id)
+     .map((e, i, final) => final.indexOf(e) === i && i)
+     .filter(obj=> carrito[obj])
+     .map(e => carrito[e]);
+    
+     console.log("id", e, carrito[e])
+
+    //carrito = aObj(getSessionStorage(cartStorage));
+    //let condicion = (id) => id = productsJSON[prodPosition].id;
+    //console.log("condicion", condicion);
+    //if (carrito.includes((element) => element.id == condicion)) {
+     //   carrito.pop();
+     //   cartPosition = carrito.findIndex((element) => element.id == condicion);
+     //   console.log ("posicion unica del producto duplicado", cartPosition);
+     //   carrito[cartPosition].cantidad += 1;
+    console.log("carrito actualizado", unique);
+    //carrito[final.indexOf(e) === i && i].cantidad += 1;
+    //}
+    
+
+    setSessionStorage(cartStorage, aString(carrito));
         
     //Mostrar carrito
     if(carrito.length >= 1) {
@@ -47,3 +76,8 @@ const agregarAlCarrito = (e) => {
     HTMLProducts ();
 }
 
+//const vaciarCarrito = () => {
+    //localStorage.clear ();
+    //sessionStorage.clear ();
+    //startLoad ();
+//}
