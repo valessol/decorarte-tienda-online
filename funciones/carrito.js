@@ -13,11 +13,13 @@
 //Añadir al carrito
 const agregarAlCarrito = (e) => {
 
-    //Acceder a la base de datos del local storage
+    //Acceder a la base de datos del local y session storage
     let productsString = getLocalStorage(productStorage);
+    let carritoString = getSessionStorage (cartStorage);
 
-    //Convertirlo a JSON
+    //Convertirlos a JSON
     let productsJSON = aObj(productsString);
+    let carrito = aObj (carritoString);
 
     //Modifico la cantidad del producto y añado al carrito
     let prodPosition = productsJSON.findIndex((p) => p.id == e);
@@ -30,7 +32,7 @@ const agregarAlCarrito = (e) => {
     setSessionStorage(cartStorage, aString(carrito));
     //Actualizar la cantidad de productos
     productsJSON[prodPosition].stock -= 1;
-    console.log("position", prodPosition, "carrito.lenght", carrito.length, carrito);
+    //console.log("position", prodPosition, "carrito.lenght", carrito.length, carrito);
         
     //Mostrar carrito
     if(carrito.length != 0) {
@@ -39,7 +41,7 @@ const agregarAlCarrito = (e) => {
         carrito.forEach(element => {
             carritoCards.push (carritoHTML (element));
         })
-        console.log("carritoCards.length", carritoCards.length, "cards", carritoCards);
+        //console.log("carritoCards.length", carritoCards.length, "cards", carritoCards);
         $('#carrito').html(carritoCards);        
     };
 
@@ -55,17 +57,4 @@ const agregarAlCarrito = (e) => {
         if (element.stock == 0) 
         $(`#btn-${element.id}`).addClass("disabled");
         });
-    
-    //mostrarCarrito (); //--> carrito.js
-    
-    //$('#carrito').html("hola");
 }
-
-/*if (carrito.length!=0){
-    for (const producto of carrito) {
-        console.log(carrito.id);
-}
-}*/
-
-//carritoHTML(carrito);
-

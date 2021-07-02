@@ -23,14 +23,3 @@ const carritoHTML = (prod) =>
     <p>CANT.: ${prod.cantidad}</p>
     <p>$ ${prod.precio}</p>
     <hr>`
-
-
-
-// const mostrarProdenCarrrito = () {
-//     let productosAMostrar = [];
-//     $.each(carrito, function(key, product){
-//         productosAMostrar.push(carritoHTML(product));
-//     });
-//     console.log(productosAMostrar);
-
-// }
