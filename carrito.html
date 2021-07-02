@@ -71,23 +71,46 @@
         
 
         <main class="container"><hr>
-                <section id="carritoDeCompras">
-                    <h2 class="subtitulo2">Carrito de compras</h2>
-                    <div class="row">
-                        <div class="col-6">
-                            <h4>Producto</h4>
+                <section id="carritoDeCompras" class="row">
+                        <div class="subtitulo2">
+                            <h2 class="toLeft">Productos añadidos</h2>
                         </div>
-                        <div class="col-3">
-                            <h4>Cantidad</h4>
+                        <div class="contenedorCarrito col-md-7">
+                            <div class="row">
+                                <div class="col-6">
+                                    <h4>Producto</h4>
+                                </div>
+                                <div class="col-3">
+                                    <h4>Cantidad</h4>
+                                </div>
+                                <div class="col-3">
+                                    <h4>Precio</h4>
+                                </div>
+                            </div>
+                            <div class="row" id="carritoActual"></div>
                         </div>
-                        <div class="col-3">
-                            <h4>Precio</h4>
-                        </div>
-                    </div>
-                    <div class="row" id="carritoActual">
                         
-                    </div>
-                    <hr>
+                        <div class="col-md-4">
+                            <div class="contenedorCarrito">
+                                <div class="row">
+                                    <p class="col-md-6">Subtotal</p>
+                                    <p class="col-md-6 subtotalCarrito"></p>
+                                </div>
+                                <div class="row">
+                                    <p class="col-md-6">IVA</p>
+                                    <p class="col-md-6 ivaCarrito"></p>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <p class="col-md-6">Total</p>
+                                    <p class="col-md-6 totalCarrito"></p>
+                                </div>
+                            </div>
+                            <div>
+                                <a href="./index.html" class="btn button">Seguir comprando</a>
+                                <button class="btn button">Finalizar</button>
+                            </div>
+                        </div>
                 </section>
         </main>
 

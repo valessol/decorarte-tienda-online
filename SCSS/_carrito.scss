@@ -42,6 +42,21 @@
     
 }
 
+.contenedorCarrito {
+    @extend #visualizarCarrito;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+
+#carritoDeCompras {
+    .button {
+        padding: 5px 10px;
+        margin-top: 10px;
+    }
+}
+
 @for $i from 1 through 16 {
     #refreshStock-#{$i} { 
        display: none;

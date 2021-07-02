@@ -12,10 +12,15 @@ const agregarAlCarrito = (e) => {
     //Modifico la cantidad del producto y añado al carrito
     let prodPosition = productsJSON.findIndex((p) => p.id == e);
     if (productsJSON[prodPosition].stock > 0) {
-        if (carrito === null) carrito = [];
-        //Actualizar productos al array carrito
-        carrito.push(new ProductsInCart (productsJSON[prodPosition].id, productsJSON[prodPosition].nombre, productsJSON[prodPosition].precio, 1));
-    }
+        //carrito === null ? carrito = [] : 
+        carrito.forEach(element => {
+                if (productsJSON[prodPosition].id == element.id) {
+                    element.cantidad += element.cantidad;
+                }  else {
+                   carrito.push(new ProductsInCart (productsJSON[prodPosition].id, productsJSON[prodPosition].nombre, productsJSON[prodPosition].precio, 1)); 
+                } 
+            });
+        };
     
     setSessionStorage(cartStorage, aString(carrito));
     //Actualizar la cantidad de productos

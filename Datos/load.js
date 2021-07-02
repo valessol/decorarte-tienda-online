@@ -48,17 +48,6 @@ const startLoad = () => {
     HTMLProducts();
 }
 
-const visualizarCarrito = () => {
-    let carritoString = getSessionStorage (cartStorage);
-    let carrito = aObj (carritoString);
-    let carritoCards = [];
-        carrito.forEach(element => {
-            carritoCards.push (verCarrito (element)); //--> HTMLfunctions.js
-        })
-        //console.log("carritoCards.length", carritoCards.length, "cards", carritoCards);
-        $('#carritoActual').html(carritoCards);   
-}
-
 const hayProductos = () => {
     HTMLProducts ();
     let carritoString = getSessionStorage (cartStorage);
@@ -67,4 +56,33 @@ const hayProductos = () => {
     $('#verCarrito').show();
     $('#carrito').html(`<p>Productos añadidos: ${carrito.length}</p>
         `); 
+}
+
+const sumarCarrito = () => {
+    let carritoString = getSessionStorage (cartStorage);
+    let carrito = aObj (carritoString);
+    let subtotal = 0;
+    let IVA = 0;
+    let total = 0;
+        carrito.forEach(element => {
+            subtotal += element.precio;
+        })
+    IVA = subtotal * 0.21;
+    total = subtotal + IVA;
+        
+    $('.subtotalCarrito').html(`<p class="col-md-6 subtotalCarrito">$ ${subtotal}</p>`); 
+    $('.ivaCarrito').html(`<p class="col-md-6 ivaCarrito">$ ${IVA}</p>`); 
+    $('.totalCarrito').html(`<p class="col-md-6 totalCarrito">$ ${total}</p>`); 
+}
+
+const visualizarCarrito = () => {
+    let carritoString = getSessionStorage (cartStorage);
+    let carrito = aObj (carritoString);
+    let carritoCards = [];
+        carrito.forEach(element => {
+            carritoCards.push (verCarrito (element)); //--> HTMLfunctions.js
+        })
+        //console.log("carritoCards.length", carritoCards.length, "cards", carritoCards);
+        $('#carritoActual').html(carritoCards);  
+    sumarCarrito();
 }
