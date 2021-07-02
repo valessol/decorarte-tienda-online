@@ -1,12 +1,10 @@
-#verCarrito {
-
-}
-
 #visualizarCarrito {
     display:block;
     background-color: #e7e3e3;
     font-family: $fuentePpal;
     color: $gris;
+    border-radius: 5px;
+    margin-top: 10px;
     h3 {
         padding: 10px;
         font-weight: bold;
@@ -29,6 +27,19 @@
             }
         }
     }
+    #verCarrito {
+        display: none;
+        
+        a {
+            font-weight: bold;
+            margin: 5px;
+        }
+        a:hover {
+            color:rgb(241, 135, 135);
+            transform: scale(1.05);
+        }
+    }
+    
 }
 
 @for $i from 1 through 16 {

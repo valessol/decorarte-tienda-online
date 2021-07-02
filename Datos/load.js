@@ -1,6 +1,6 @@
 //Cargar el JSON en la base de datos que será el local storage
 const baseDeDatosProductos = () => {
-    
+    //localStorage.clear ();
     $.getJSON( "../Datos/productos.json", function(products) { 
 
         //Convierto a string el JSON
@@ -27,13 +27,18 @@ const HTMLProducts = () => {
         let productCards = [];
         $.each( productsJSON, function( key, product ) {
             productCards.push(productosHTML(product)); //--> HTMLfunctions.js
-            //productos.push(product);
+            if (product.stock == 0) 
+            $(`#btn-${product.id}`).addClass("disabled");
         });
         //console.log("despues", productCards);
         //console.log("despues", productos);
 
     //Los muestro en el html
     $('.galeriaProductos').html(productCards);
+    $.each( productsJSON, function( key, product ) {
+        if (product.stock == 0) 
+        $(`#btn-${product.id}`).addClass("disabled");
+    });
 }
 
 
@@ -41,4 +46,25 @@ const HTMLProducts = () => {
 const startLoad = () => {
     baseDeDatosProductos();
     HTMLProducts();
+}
+
+const visualizarCarrito = () => {
+    let carritoString = getSessionStorage (cartStorage);
+    let carrito = aObj (carritoString);
+    let carritoCards = [];
+        carrito.forEach(element => {
+            carritoCards.push (verCarrito (element)); //--> HTMLfunctions.js
+        })
+        //console.log("carritoCards.length", carritoCards.length, "cards", carritoCards);
+        $('#carritoActual').html(carritoCards);   
+}
+
+const hayProductos = () => {
+    HTMLProducts ();
+    let carritoString = getSessionStorage (cartStorage);
+    let carrito = aObj (carritoString);
+    $('#empty').css("display", "none");
+    $('#verCarrito').show();
+    $('#carrito').html(`<p>Productos añadidos: ${carrito.length}</p>
+        `); 
 }

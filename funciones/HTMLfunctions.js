@@ -19,7 +19,32 @@ const productosHTML = (product) => `<div class="galeriaItems">
 
 //Mostrar productos del carrito
 const carritoHTML = (prod) =>
-    `<p class="cardTitle">${prod.nombre}</p>
+    `<p>Hay ${prod.length}</p>
     <p>CANT.: ${prod.cantidad}</p>
     <p>$ ${prod.precio}</p>
+    <hr>`
+
+//Actualizar productos en DOM
+//const actualizar = (e) => {
+  //  let productsString = getLocalStorage(productStorage);
+    //let productsJSON = aObj(productsString);
+    //HTMLProducts();
+    //console.log("stock actual", productsJSON[e].stock );
+    //productsJSON.forEach(element => {
+        //if (element.stock == 0) 
+        //$(`#btn-${element.id}`).addClass("disabled");
+        //});
+//}
+
+//Visualizar los prodcutos en la página del carrito
+const verCarrito = (prod) =>
+    `<div class="col-6">
+        <p class="cardTitle">${prod.nombre}</p>
+    </div>
+    <div class="col-3">
+        <p>${prod.cantidad}</p>
+    </div>  
+    <div class="col-3">
+        <p>$ ${prod.precio}</p>
+    </div>  
     <hr>`

@@ -18,9 +18,8 @@
 </head>
 
 <body>
-    <div class="container">
         <!-- Caja principal del header -->
-        <header>
+        <header class="container">
             <!-- Logo -->
             <img class="logo" src="../img/Logo 300x300.png" alt="Decorarte Accesorios Impresos">
             <!-- Menu secundario -->
@@ -69,89 +68,82 @@
               </div>
         </section>
 
-        <hr>
+        
 
-        <main class="row">
-            <section id="carritoDeCompras" class="col-12">
-              <h3>Carrito de compras</h3>
-              <div class="row">
-                  <div class="col-6">
-                    <h4>Producto</h4>
-                  </div>
-                  <div class="col-3">
-                    <h4>Cantidad</h4>
-                  </div>
-                  <div class="col-3">
-                    <h4>Precio</h4>
-                  </div>
-              </div>
-              <div class="row" id="carrito">
-                <div class="col-9">
-                  <p id="carritoNombre"></p>
-                  <p id="carritoCantidad"></p>
-              </div>
-              <div class="col-3">
-                  <p id="carritoPrecio"></p>
-              </div>  
-              </div>
-              <hr>
-            </section>
+        <main class="container"><hr>
+                <section id="carritoDeCompras">
+                    <h2 class="subtitulo2">Carrito de compras</h2>
+                    <div class="row">
+                        <div class="col-6">
+                            <h4>Producto</h4>
+                        </div>
+                        <div class="col-3">
+                            <h4>Cantidad</h4>
+                        </div>
+                        <div class="col-3">
+                            <h4>Precio</h4>
+                        </div>
+                    </div>
+                    <div class="row" id="carritoActual">
+                        
+                    </div>
+                    <hr>
+                </section>
         </main>
 
         <footer>
-          <ul class="menuFooter">
-              <li>
-                  <a href="../index.html">Inicio</a>
-              </li>
-              <li>
-                  <a href="nosotros.html">Nosotros</a>
-              </li>
-              <li>
-                  <a href="productos.html">Productos</a>
-              </li>
-              <li>
-                  <a href="descargas.html">Receta</a>
-              </li>
-              <li>
-                  <a href="contacto.html">Contacto</a>
-              </li>
-          </ul>
-          <ul class="menuFooter">
-              <li>
-                  <a href="#">Envíos</a>
-              </li>
-              <li>
-                  <a href="#">Medios de Pago</a>
-              </li>
-              <li>
-                  <a href="#">Cómo comprar</a>
-              </li>
-              <li>
-                  <a href="#">Preguntas Frecuentes</a>
-              </li>
-              <li>
-                <a href="sitemap.html">Mapa de Sitio</a>
-            </li>
-          </ul>
-          <ul class="menuFooter">
-              <li>
-                  Florencio Varela, Bs. As., Argentina
-              </li>
-              <li>
-                  Whatsapp: +5411-7361-1513
-              </li>
-              <li>
-                  <img class="redesSociales" src="../img/facebook.svg" alt="Facebook">
-                  <img class="redesSociales" src="../img/instagram.svg" alt="Instagram">
-                  <img class="redesSociales" src="../img/whatsapp.svg" alt="Whatsapp">
-              </li>
-          </ul>
-          <div>
-              <img class="logoFooter" src="../img/Logo 300x300.png" alt="Decorarte Accesorios Impresos">
-          </div>
-      </footer>
-    </div>
-
+            <div class="container contenidoFooter">
+                <ul class="menuFooter">
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="pages/nosotros.html">Nosotros</a>
+                    </li>
+                    <li>
+                        <a href="pages/productos.html">Productos</a>
+                    </li>
+                    <li>
+                        <a href="pages/descargas.html">Receta</a>
+                    </li>
+                    <li>
+                        <a href="pages/contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                <ul class="menuFooter">
+                    <li>
+                        <a href="#">Envíos</a>
+                    </li>
+                    <li>
+                        <a href="#">Medios de Pago</a>
+                    </li>
+                    <li>
+                        <a href="#">Cómo comprar</a>
+                    </li>
+                    <li>
+                        <a href="#">Preguntas Frecuentes</a>
+                    </li><li>
+                        <a href="./pages/sitemap.html">Mapa de Sitio</a>
+                    </li>
+                </ul>
+                <ul class="menuFooter">
+                    <li>
+                        Florencio Varela, Bs. As., Argentina
+                    </li>
+                    <li>
+                        Whatsapp: +5411-7361-1513
+                    </li>
+                    <li>
+                        <img class="redesSociales" src="img/facebook.svg" alt="Facebook">
+                        <img class="redesSociales" src="img/instagram.svg" alt="Instagram">
+                        <img class="redesSociales" src="img/whatsapp.svg" alt="Whatsapp">
+                    </li>
+                </ul>
+                <div>
+                    <img class="logoFooter" src="img/Logo 300x300.png" alt="Decorarte Accesorios Impresos">
+                </div>
+            </div>
+        </footer>
 
 
 
@@ -163,9 +155,10 @@
     <script src="./funciones/constructor.js"></script>
     <script src="./funciones/jsonManager.js"></script>
     <script src="./funciones/HTMLfunctions.js"></script>
+    
+    <script src="./funciones/eventos.js"></script>
     <script src="./Datos/load.js"></script>
     <script src="./funciones/carrito.js"></script>
-    <script src="./productos.js"></script>
     
 
     

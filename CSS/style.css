@@ -308,7 +308,9 @@ p, #visualizarCarrito #carrito p {
   display: block;
   background-color: #e7e3e3;
   font-family: "Montserrat" sans-serif;
-  color: #252525; }
+  color: #252525;
+  border-radius: 5px;
+  margin-top: 10px; }
   #visualizarCarrito h3 {
     padding: 10px;
     font-weight: bold;
@@ -323,6 +325,14 @@ p, #visualizarCarrito #carrito p {
     font-size: 16px; }
   #visualizarCarrito #carrito p .cardTitle {
     font-weight: bold; }
+  #visualizarCarrito #verCarrito {
+    display: none; }
+    #visualizarCarrito #verCarrito a {
+      font-weight: bold;
+      margin: 5px; }
+    #visualizarCarrito #verCarrito a:hover {
+      color: #f18787;
+      transform: scale(1.05); }
 
 #refreshStock-1 {
   display: none; }
