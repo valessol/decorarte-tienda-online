@@ -40,7 +40,7 @@
             <nav class="topnav" id="myTopnav">
                 <hr>
                 <div>
-                    <a href="index.html" class="active">Inicio</a>
+                    <a href="#/index" class="active">Inicio</a>
                     <a href="pages/nosotros.html">Nosotros</a>
                     <a href="pages/descargas.html">Receta</a>
                     <a href="pages/contacto.html">Contacto</a>
@@ -60,7 +60,7 @@
               </div>
         </section>
 
-        <main class="container">
+        <main class="spa container">
             <div class="row">
                 
                 <!-- Menu media queries max768px -->
@@ -110,7 +110,10 @@
                         <p id="empty">Carrito vacío</p>
                       
                         <div id="carrito"></div>
-                        <hr>
+
+                        <div id="carritoBtn" class="card-btn button">
+                            <a href="#/carrito" id="carritoLink" class="btn linkButton" data-bs-toggle="modal-body" data-bs-target="#carritoModal">Ver carrito</a>
+                        </div>
                     </div>
                 </aside>
     
@@ -193,6 +196,7 @@
     <script src="./funciones/HTMLfunctions.js"></script>
     <script src="./Datos/load.js"></script>
     <script src="./funciones/carrito.js"></script>
+    <script src="./router/router.js"></script>
     <script src="./index.js"></script>
 
     <script src="https://use.fontawesome.com/bb872be55d.js"></script>

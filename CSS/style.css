@@ -323,6 +323,8 @@ p, #visualizarCarrito #carrito p {
     font-size: 16px; }
   #visualizarCarrito #carrito p .cardTitle {
     font-weight: bold; }
+  #visualizarCarrito #carritoBtn {
+    display: none; }
 
 #refreshStock-1 {
   display: none; }

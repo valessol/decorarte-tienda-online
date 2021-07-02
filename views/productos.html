@@ -1,0 +1,84 @@
+<main class="spa container">
+    <div class="row">
+        
+        <!-- Menu media queries max768px -->
+        <div class="accordion accordion-flush acordeon768" id="accordionFlushExample">
+            <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed acordeonItem" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                Categorias
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                    Cortantes
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">Cake toppers</a>
+                    <a href="#" class="list-group-item list-group-item-action">Sellos</a>
+                    <a href="#" class="list-group-item list-group-item-action">Herramientas</a>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Menu de categorias -->
+        <aside class="col-md-3 col-xxl-2 acordeon">
+
+            <!-- Título -->
+            <div class="subtitulo2">
+                <h2 class="toLeft">Categorias</h2>
+            </div>
+
+            <!-- Acordeon -->
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item acordeonItem">Cortantes</li>
+                <li class="list-group-item acordeonItem">Cake toppers</li>
+                <li class="list-group-item acordeonItem">Texturadores</li>
+                <li class="list-group-item acordeonItem">Sellos</li>
+            </ul>
+
+            <!-- Carrito -->
+            <div id="visualizarCarrito">
+
+                <h3>Carrito de compras</h3>
+                <hr>
+                <p id="empty">Carrito vacío</p>
+              
+                <div id="carrito"></div>
+
+                <div id="carritoBtn" class="card-btn button">
+                    <a href="#/carrito" class="btn linkButton" data-bs-toggle="modal-body" data-bs-target="#carritoModal" onclick = "">Ver carrito</a>
+                </div>
+            </div>
+        </aside>
+
+
+        <!-- Galeria de productos -->
+        <!-- <section id="verCarrito" class="col-12"></section> -->
+        <section id= "galeria" class="col-md-9 col-xxl-10 galeria">
+
+            <!-- Galeria -->
+            <div class="subtitulo2">
+                <h2 class="toLeft">Productos</h2>
+            </div>
+            
+            <div class="galeriaProductos"></div> 
+
+            <div id="galeriaCarritoModal"></div>
+        </section>
+    </div>
+</main>
+
+
+<script src="./funciones/variablesGlobales.js"></script>
+    <script src="./funciones/jsonManager.js"></script>
+    <script src="./funciones/storage.js"></script>
+    <script src="./funciones/constructor.js"></script>
+    
+    <script src="./funciones/HTMLfunctions.js"></script>
+    <script src="./Datos/load.js"></script>
+    <script src="./funciones/carrito.js"></script>
+    <script src="./index.js"></script>

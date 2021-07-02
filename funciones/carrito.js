@@ -37,6 +37,7 @@ const agregarAlCarrito = (e) => {
     //Mostrar carrito
     if(carrito.length != 0) {
         $('#empty').css("display", "none");
+        $('#carritoBtn').show();
         let carritoCards = [];
         carrito.forEach(element => {
             carritoCards.push (carritoHTML (element));
