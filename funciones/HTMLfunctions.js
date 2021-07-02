@@ -19,43 +19,26 @@ const productosHTML = (product) => `<div class="galeriaItems">
 
 //Mostrar productos del carrito
 const carritoHTML = (prod) => {
-    `<div class="col-9">
-        <p>${prod.nombre}</p>
-        <p>CANT.:${prod.cantidad}</p>
-    </div>
-    <div class="col-3">
-        <p>$ ${prod.precio}</p>
-    </div><hr>`
-};
-
-const mostrarCarrito = () => {
+    // `<div class="col-9">
+    //     <p>${prod.nombre}</p>
+    //     <p>CANT.:${prod.cantidad}</p>
+    // </div>
+    // <div class="col-3">
+    //     <p>$ ${prod.precio}</p>
+    // </div><hr>`
 
 
-    if(!carrito.length==0) {
-        $('#verCarrito').html(`<div class="carritoMsg">El producto ha sido añadido con éxito</div><a href="./carrito.html" class="btn linkButton">Ver Carrito</a>
-        `);
-        for (let i=0; i<carrito.length+1; i++ ){
-            $('#carrito').html(
-                `<div class="col-6">
-                    <p>${carrito[i].nombre}</p>
-                </div>
-                <div class="col-3">
-                    <p>CANT.:${carrito[i].cantidad}</p>
-                </div>
-                <div class="col-3">
-                    <p>$ ${carrito[i].precio}</p>
-                </div>
-                <hr>`
-            );
-        } ; 
-    };
-};
 
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
-  }
+    $('#carritoNombre').html(`${prod.nombre}`);
+    $('#carritoCantidad').html(`CANT.:${prod.cantidad}`);
+    $('#carritoPrecio').html(`$ ${prod.precio}`);
+}
+
+// const mostrarProdenCarrrito = () {
+//     let productosAMostrar = [];
+//     $.each(carrito, function(key, product){
+//         productosAMostrar.push(carritoHTML(product));
+//     });
+//     console.log(productosAMostrar);
+
+// }

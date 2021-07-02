@@ -2,18 +2,24 @@
 
 class ProductsInCart {
 
-    constructor (id, nombre, precio, cantidad) {
+    constructor (id, nombre, precio) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
-        this.cantidad = cantidad;
+        this.cantidad= 1;
       
     }
 
-};
+    // cantidadAgregada () {
+    //     let count = 0;
+    //     setInterval(function(){
+    //         $(`#refreshStock-${this.id}`).html(count)}, 1000
+    //     );
 
-//si hay stock del producto y ademas cumple:
-const agregarProducto = (pos) => {
+    //     $(`#btn-${this.id}`).click(function(){
+    //         this.cantidad = count += 1;
+    //     });
 
-    carrito.push(new ProductsInCart (productos[pos].id, productos[pos].nombre, productos[pos].precio, 1));
+    //     return this.cantidad;
+    // };
 };

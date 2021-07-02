@@ -1,5 +1,17 @@
-window.onload= startLoad (); //--> router.js
 
-/*$(window).on("hashchange", function () {
-    router ();
-});*/
+//Cargar los productos al HTML
+
+window.onload= startLoad(); //--> load.js
+
+
+
+//cantidadAgregada ();
+
+
+
+
+
+
+
+
+  

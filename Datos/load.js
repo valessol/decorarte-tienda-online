@@ -2,8 +2,10 @@
 const baseDeDatosProductos = () => {
     $.getJSON( "../Datos/productos.json", function(products) { 
 
-        let baseDeDatosString = aString (products); //--> jsonManager.js
-        localStorage.clear();
+        //Convierto a string el JSON
+        let baseDeDatosString = aString(products); //-->jsonManager.js
+
+        //almaceno el string en el local storage (key, value)
         setLocalStorage (productStorage, baseDeDatosString); //--> storage.js
     });
 }
@@ -14,18 +16,28 @@ const HTMLProducts = () => {
 
     $('.galeriaProductos').html("");
 
-    localStorageArray(); //--> storage.js
-    
-    let productCards = [];
-    $.each( productos, function( key, product ) {
-        productCards.push(productosHTML(product)); //--> HTMLfunctions.js
-    });
+    //Cargo los productos desde el local Storage
+    let productsString = getLocalStorage(productStorage); //--> storage.js
 
+    //Parseo los productos para tenerlos como objetos literales
+    let productsJSON = aObj(productsString); //--> jsonManager.js
+
+    //Recorro el productJSON y agrego los productos al array
+        let productCards = [];
+        $.each( productsJSON, function( key, product ) {
+            productCards.push(productosHTML(product)); //--> HTMLfunctions.js
+            //productos.push(product);
+        });
+        //console.log("despues", productCards);
+        //console.log("despues", productos);
+
+    //Los muestro en el html
     $('.galeriaProductos').html(productCards);
 }
+
+
 
 const startLoad = () => {
     baseDeDatosProductos();
     HTMLProducts();
 }
-
