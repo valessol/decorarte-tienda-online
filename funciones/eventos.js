@@ -8,26 +8,31 @@ const agregarAlCarrito = (e) => {
     //Convertirlos a JSON
     let productsJSON = aObj(productsString);
     let carrito = aObj (carritoString);
-
+    console.log("antes", carrito);
     //Modifico la cantidad del producto y añado al carrito
     let prodPosition = productsJSON.findIndex((p) => p.id == e);
-    if (productsJSON[prodPosition].stock > 0) {
-        //carrito === null ? carrito = [] : 
-        carrito.forEach(element => {
-                if (productsJSON[prodPosition].id == element.id) {
-                    element.cantidad += element.cantidad;
-                }  else {
-                   carrito.push(new ProductsInCart (productsJSON[prodPosition].id, productsJSON[prodPosition].nombre, productsJSON[prodPosition].precio, 1)); 
-                } 
-            });
-        };
+    let cartPosition;
+
+    if (carrito === null) {
+        carrito = [];
+        carrito.push(new ProductsInCart (productsJSON[prodPosition].id, productsJSON[prodPosition].nombre, productsJSON[prodPosition].precio, 1));
+        console.log("carrito con producto nuevo", carrito)
+    } else {
+        carrito.push(new ProductsInCart (productsJSON[prodPosition].id, productsJSON[prodPosition].nombre, productsJSON[prodPosition].precio, 1));
+    }
+    
+    carrito.forEach (element => {
+        element.id == productsJSON[prodPosition].id ? element.cantidad += 1 : element.cantidad = 1;
+    });
+    console.log("carrito con producto repetido", carrito)
+
     
     setSessionStorage(cartStorage, aString(carrito));
     //Actualizar la cantidad de productos
     productsJSON[prodPosition].stock -= 1;
         
     //Mostrar carrito
-    if(carrito.length != 0) {
+    if(carrito.length >= 1) {
         $('#empty').css("display", "none");
         $('#verCarrito').show();
         $('#carrito').html(`<p>Productos añadidos: ${carrito.length}</p>
