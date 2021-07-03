@@ -27,11 +27,9 @@ const HTMLProducts = () => {
         let productCards = [];
         $.each( productsJSON, function( key, product ) {
             productCards.push(productosHTML(product)); //--> HTMLfunctions.js
-            if (product.stock == 0) 
-            $(`#btn-${product.id}`).addClass("disabled");
+            //if (product.stock == 0) 
+            //$(`#btn-${product.id}`).addClass("disabled");
         });
-        //console.log("despues", productCards);
-        //console.log("despues", productos);
 
     //Los muestro en el html
     $('.galeriaProductos').html(productCards);
@@ -40,8 +38,6 @@ const HTMLProducts = () => {
         $(`#btn-${product.id}`).addClass("disabled");
     });
 }
-
-
 
 const startLoad = () => {
     baseDeDatosProductos();
@@ -52,10 +48,9 @@ const hayProductos = () => {
     HTMLProducts ();
     let carritoString = getSessionStorage (cartStorage);
     let carrito = aObj (carritoString);
-    $('#empty').css("display", "none");
-    $('#verCarrito').show();
-    $('#carrito').html(`<p>Productos añadidos: ${carrito.length}</p>
-        `); 
+
+    if(carrito === null) carrito =[];
+    carritoHTML (carrito);
 }
 
 const sumarCarrito = () => {
@@ -64,9 +59,10 @@ const sumarCarrito = () => {
     let subtotal = 0;
     let IVA = 0;
     let total = 0;
-        carrito.forEach(element => {
-            subtotal += element.precio;
-        })
+
+    carrito.forEach(element => {
+        subtotal += (element.precio * element.cantidad);
+    })
     IVA = subtotal * 0.21;
     total = subtotal + IVA;
         
@@ -79,10 +75,11 @@ const visualizarCarrito = () => {
     let carritoString = getSessionStorage (cartStorage);
     let carrito = aObj (carritoString);
     let carritoCards = [];
-        carrito.forEach(element => {
-            carritoCards.push (verCarrito (element)); //--> HTMLfunctions.js
-        })
-        //console.log("carritoCards.length", carritoCards.length, "cards", carritoCards);
-        $('#carritoActual').html(carritoCards);  
+
+    carrito.forEach(element => {
+        carritoCards.push (verCarrito (element)); //--> HTMLfunctions.js
+    })
+
+    $('#carritoActual').html(carritoCards);  
     sumarCarrito();
 }

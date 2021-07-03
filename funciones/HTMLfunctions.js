@@ -18,23 +18,12 @@ const productosHTML = (product) => `<div class="galeriaItems">
 
 
 //Mostrar productos del carrito
-const carritoHTML = (prod) =>
-    `<p>Hay ${prod.length}</p>
-    <p>CANT.: ${prod.cantidad}</p>
-    <p>$ ${prod.precio}</p>
-    <hr>`
-
-//Actualizar productos en DOM
-//const actualizar = (e) => {
-  //  let productsString = getLocalStorage(productStorage);
-    //let productsJSON = aObj(productsString);
-    //HTMLProducts();
-    //console.log("stock actual", productsJSON[e].stock );
-    //productsJSON.forEach(element => {
-        //if (element.stock == 0) 
-        //$(`#btn-${element.id}`).addClass("disabled");
-        //});
-//}
+const carritoHTML = (p) => {
+        $('#empty').css("display", "none");
+        $('#verCarrito').show();
+        $('#carrito').html(`<p>Productos añadidos: ${p.length}</p>`);    
+}
+    
 
 //Visualizar los prodcutos en la página del carrito
 const verCarrito = (prod) =>

@@ -2,82 +2,43 @@
 const agregarAlCarrito = (e) => {
 
     //Acceder a la base de datos del local y session storage
-    let productsString = getLocalStorage(productStorage);
-    let carritoString = getSessionStorage (cartStorage);
+    let productsString = getLocalStorage(productStorage); //--> storage.js
+    let carritoString = getSessionStorage (cartStorage); //--> storage.js
 
     //Convertirlos a JSON
-    let productsJSON = aObj(productsString);
+    let productsJSON = aObj(productsString); //--> jsonManager.js
     let carrito = aObj (carritoString);
-    console.log("antes", carrito);
+   
     //Modifico la cantidad del producto y añado al carrito
     let prodPosition = productsJSON.findIndex((p) => p.id == e);
     let cartPosition;
 
     if (carrito === null) {
         carrito = [];
-        carrito.push(new ProductsInCart (productsJSON[prodPosition].id, productsJSON[prodPosition].nombre, productsJSON[prodPosition].precio, 1));
-        console.log("primer producto del carrito", carrito)
+        carrito.push(new ProductsInCart (productsJSON[prodPosition].id, productsJSON[prodPosition].nombre, productsJSON[prodPosition].precio, 1)); //--> constructor.js
     } else {
-        carrito.push(new ProductsInCart (productsJSON[prodPosition].id, productsJSON[prodPosition].nombre, productsJSON[prodPosition].precio, 1));
-        console.log("nuevo producto al carrito", carrito)
+        // Buscar si ya existe o no
+    let itemId = productsJSON[prodPosition].id;    
+    let existe = carrito.findIndex(item => item.id == itemId);
+    // Si hubo coincidencia, entonces existe debe ser mayor o igual que cero
+    existe >= 0 ? carrito[existe].cantidad ++ : carrito.push(new ProductsInCart (productsJSON[prodPosition].id, productsJSON[prodPosition].nombre, productsJSON[prodPosition].precio, 1));
+        // Ya existe el producto en el carrito  
     }
-
-    
-    //if (carrito.every (carrito.condicion)) {
-
-    //}
-    
-    //cartPosition.pop();
-    //console.log ("posicion unica del producto duplicado", cartPosition);
-    //
-    //console.log("carrito con producto repetido", carrito)
-
-    
-    setSessionStorage(cartStorage, aString(carrito));
-    //Actualizar la cantidad de productos
-    productsJSON[prodPosition].stock -= 1;
-
-    unique = carrito
-     .map(e => e.id)
-     .map((e, i, final) => final.indexOf(e) === i && i)
-     .filter(obj=> carrito[obj])
-     .map(e => carrito[e]);
-    
-     console.log("id", e, carrito[e])
-
-    //carrito = aObj(getSessionStorage(cartStorage));
-    //let condicion = (id) => id = productsJSON[prodPosition].id;
-    //console.log("condicion", condicion);
-    //if (carrito.includes((element) => element.id == condicion)) {
-     //   carrito.pop();
-     //   cartPosition = carrito.findIndex((element) => element.id == condicion);
-     //   console.log ("posicion unica del producto duplicado", cartPosition);
-     //   carrito[cartPosition].cantidad += 1;
-    console.log("carrito actualizado", unique);
-    //carrito[final.indexOf(e) === i && i].cantidad += 1;
-    //}
-    
-
-    setSessionStorage(cartStorage, aString(carrito));
-        
     //Mostrar carrito
-    if(carrito.length >= 1) {
-        $('#empty').css("display", "none");
-        $('#verCarrito').show();
-        $('#carrito').html(`<p>Productos añadidos: ${carrito.length}</p>
-        `);              
-    };
-
-    //Actualizar la cantidad de productos en el local storage (sobreescribir variable) 
+    if (carrito.length >= 1) carritoHTML (carrito);  //--> HTMLfunctions.js
+console.log(carrito);
+    
+    setSessionStorage(cartStorage, aString(carrito));
+    productsJSON[prodPosition].stock -= 1;
     productsString = aString(productsJSON);
     setLocalStorage(productStorage, productsString);
 
-    //Actualizar la cantidad de productos en pantalla
-    HTMLProducts ();
+    //Renderizar pantalla
+    HTMLProducts (); //--> load.js
 }
 
-//const vaciarCarrito = () => {
-    //localStorage.clear ();
-    //sessionStorage.clear ();
-    //startLoad ();
-//}
+const vaciarCarrito = () => {
+    localStorage.clear ();
+    sessionStorage.clear ();
+    startLoad ();
+}
