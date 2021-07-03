@@ -50,7 +50,7 @@ const sumarCarrito = () => {
     carrito.forEach(element => {
         subtotal += (element.precio * element.cantidad);
     })
-    IVA = subtotal * 0.21;
+    IVA = parseFloat((subtotal * 0.21).toFixed(2));
     total = subtotal + IVA;
         
     $('.subtotalCarrito').html(`<p class="col-md-6 subtotalCarrito">$ ${subtotal}</p>`); 
