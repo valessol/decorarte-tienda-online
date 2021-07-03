@@ -1,12 +1,7 @@
-//Cargar el JSON en la base de datos que será el local storage
+//Cargar el JSON 
 const baseDeDatosProductos = () => {
-    //localStorage.clear ();
     $.getJSON( "../Datos/productos.json", function(products) { 
-
-        //Convierto a string el JSON
         let baseDeDatosString = aString(products); //-->jsonManager.js
-
-        //almaceno el string en el local storage (key, value)
         setLocalStorage (productStorage, baseDeDatosString); //--> storage.js
     });
 }
@@ -14,36 +9,28 @@ const baseDeDatosProductos = () => {
 
 //cargar los productos al HTML desde el local Storage
 const HTMLProducts = () => {
-
     $('.galeriaProductos').html("");
-
-    //Cargo los productos desde el local Storage
     let productsString = getLocalStorage(productStorage); //--> storage.js
-
-    //Parseo los productos para tenerlos como objetos literales
     let productsJSON = aObj(productsString); //--> jsonManager.js
+    let productCards = [];
+    $.each( productsJSON, function( key, product ) {
+        productCards.push(productosHTML(product)); //--> HTMLfunctions.js
+    });
 
-    //Recorro el productJSON y agrego los productos al array
-        let productCards = [];
-        $.each( productsJSON, function( key, product ) {
-            productCards.push(productosHTML(product)); //--> HTMLfunctions.js
-            //if (product.stock == 0) 
-            //$(`#btn-${product.id}`).addClass("disabled");
-        });
-
-    //Los muestro en el html
+    //Renderizo
     $('.galeriaProductos').html(productCards);
     $.each( productsJSON, function( key, product ) {
         if (product.stock == 0) 
         $(`#btn-${product.id}`).addClass("disabled");
     });
 }
-
+//Ejecuto cada vez que el sessionStorage esté vacío
 const startLoad = () => {
     baseDeDatosProductos();
     HTMLProducts();
 }
 
+//Si ya hay productos en el carrito, entonces renderizo esto al volver al index
 const hayProductos = () => {
     HTMLProducts ();
     let carritoString = getSessionStorage (cartStorage);

@@ -339,9 +339,13 @@ p, #visualizarCarrito #carrito p, .contenedorCarrito #carrito p {
   padding: 10px;
   border-radius: 10px; }
 
+#carritoDeCompras .totalCarrito, #carritoDeCompras .totalTitle {
+  font-weight: bold; }
+
 #carritoDeCompras .button {
   padding: 5px 10px;
-  margin-top: 10px; }
+  margin-top: 10px;
+  justify-content: flex-end; }
 
 #refreshStock-1 {
   display: none; }

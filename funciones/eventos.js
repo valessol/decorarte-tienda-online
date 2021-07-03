@@ -17,16 +17,14 @@ const agregarAlCarrito = (e) => {
         carrito = [];
         carrito.push(new ProductsInCart (productsJSON[prodPosition].id, productsJSON[prodPosition].nombre, productsJSON[prodPosition].precio, 1)); //--> constructor.js
     } else {
-        // Buscar si ya existe o no
-    let itemId = productsJSON[prodPosition].id;    
-    let existe = carrito.findIndex(item => item.id == itemId);
-    // Si hubo coincidencia, entonces existe debe ser mayor o igual que cero
-    existe >= 0 ? carrito[existe].cantidad ++ : carrito.push(new ProductsInCart (productsJSON[prodPosition].id, productsJSON[prodPosition].nombre, productsJSON[prodPosition].precio, 1));
-        // Ya existe el producto en el carrito  
+        // Buscar si ya existe el producto
+        let itemId = productsJSON[prodPosition].id;    
+        let existe = carrito.findIndex(item => item.id == itemId);
+        existe >= 0 ? carrito[existe].cantidad ++ : carrito.push(new ProductsInCart (productsJSON[prodPosition].id, productsJSON[prodPosition].nombre, productsJSON[prodPosition].precio, 1)); 
     }
     //Mostrar carrito
     if (carrito.length >= 1) carritoHTML (carrito);  //--> HTMLfunctions.js
-console.log(carrito);
+    console.log(carrito);
     
     setSessionStorage(cartStorage, aString(carrito));
     productsJSON[prodPosition].stock -= 1;
