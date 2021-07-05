@@ -501,6 +501,10 @@ p, #visualizarCarrito #carrito p, .contenedorCarrito #carrito p {
   font-family: "Montserrat" sans-serif;
   text-transform: uppercase; }
 
+.acordeon a {
+  text-decoration: none;
+  color: #252525; }
+
 .acordeonItem:hover {
   background-color: #f7adad;
   color: #252525;

@@ -40,3 +40,82 @@ const vaciarCarrito = () => {
     sessionStorage.clear ();
     startLoad ();
 }
+
+
+//Eventos de acordeon
+
+const filtrarToppers = () => {
+    //Acceder a la base de datos del local storage
+    let productsString = getLocalStorage(productStorage); //--> storage.js
+    let productsJSON = aObj(productsString); //--> jsonManager.js
+
+    let productsToFilter = productsJSON.filter ((p) => p.categoria == "CAKE TOPPER");
+    let productCards = [];
+    $.each( productsToFilter, function( key, product ) {
+        productCards.push(productosHTML(product)); //--> HTMLfunctions.js
+    });
+
+    //Renderizo
+    $('.galeriaProductos').html(productCards);
+    $.each( productsToFilter, function( key, product ) {
+        if (product.stock == 0) 
+        $(`#btn-${product.id}`).addClass("disabled");
+    });
+}
+
+const filtrarCortantes = () => {
+    //Acceder a la base de datos del local storage
+    let productsString = getLocalStorage(productStorage); //--> storage.js
+    let productsJSON = aObj(productsString); //--> jsonManager.js
+
+    let productsToFilter = productsJSON.filter ((p) => p.categoria == "CORTANTE");
+    let productCards = [];
+    $.each( productsToFilter, function( key, product ) {
+        productCards.push(productosHTML(product)); //--> HTMLfunctions.js
+    });
+
+    //Renderizo
+    $('.galeriaProductos').html(productCards);
+    $.each( productsToFilter, function( key, product ) {
+        if (product.stock == 0) 
+        $(`#btn-${product.id}`).addClass("disabled");
+    });
+}
+
+const filtrarText = () => {
+    //Acceder a la base de datos del local storage
+    let productsString = getLocalStorage(productStorage); //--> storage.js
+    let productsJSON = aObj(productsString); //--> jsonManager.js
+
+    let productsToFilter = productsJSON.filter ((p) => p.categoria == "TEXTURIZADOR");
+    let productCards = [];
+    $.each( productsToFilter, function( key, product ) {
+        productCards.push(productosHTML(product)); //--> HTMLfunctions.js
+    });
+
+    //Renderizo
+    $('.galeriaProductos').html(productCards);
+    $.each( productsToFilter, function( key, product ) {
+        if (product.stock == 0) 
+        $(`#btn-${product.id}`).addClass("disabled");
+    });
+}
+
+const filtrarSellos = () => {
+    //Acceder a la base de datos del local storage
+    let productsString = getLocalStorage(productStorage); //--> storage.js
+    let productsJSON = aObj(productsString); //--> jsonManager.js
+
+    let productsToFilter = productsJSON.filter ((p) => p.categoria == "SELLO");
+    let productCards = [];
+    $.each( productsToFilter, function( key, product ) {
+        productCards.push(productosHTML(product)); //--> HTMLfunctions.js
+    });
+
+    //Renderizo
+    $('.galeriaProductos').html(productCards);
+    $.each( productsToFilter, function( key, product ) {
+        if (product.stock == 0) 
+        $(`#btn-${product.id}`).addClass("disabled");
+    });
+}

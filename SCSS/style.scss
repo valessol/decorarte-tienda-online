@@ -144,6 +144,10 @@
         font-family: $fuentePpal;
         text-transform: uppercase;
     }
+    a {
+        text-decoration: none;
+        color: $gris;
+    }
 }
  .acordeonItem:hover {
     background-color: rgb(247, 173, 173);
