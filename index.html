@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    
+    <div id="productsBody">
         <!-- Caja principal del header -->
         <header class="container">
             <!-- Logo -->
@@ -34,6 +34,20 @@
                 </div>
                 <hr>
             </nav>
+            <!-- Menu secundario -->
+            <div class="menuSecundario">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#" id="cart-btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Mi cuenta</a>
+                    </li>
+                  </ul>
+            </div>
         </header>
 
         <!-- Imagen principal -->
@@ -83,25 +97,13 @@
                     <!-- Acordeon -->
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item acordeonItem">
+                           <a href="#" onclick="HTMLProducts()">Todos</a> </li>
+                        <li class="list-group-item acordeonItem">
                            <a href="#" onclick="filtrarCortantes()">Cortantes</a> </li>
                         <li class="list-group-item acordeonItem"><a href="#" onclick="filtrarToppers()">Cake Toppers</a></li>
                         <li class="list-group-item acordeonItem"><a href="#" onclick="filtrarText()">Texturadores</a></li>
                         <li class="list-group-item acordeonItem"><a href="#" onclick="filtrarSellos()">Sellos</a></li>
                     </ul>
-
-                    <!-- Carrito -->
-                    <div id="visualizarCarrito">
-
-                        <h3>Carrito</h3>
-                        <hr>
-                        <p id="empty">Tu carrito está vacío</p>
-                      
-                        <div id="carrito"></div>
-                        <div id="verCarrito">
-                            <a href="./carrito.html" class="btn"><i class="fa fa-angle-double-right"></i> Ver Carrito</a>
-                            <a href="#" class="btn" onclick="vaciarCarrito ()"><i class="fa fa-angle-double-right"></i> Vaciar Carrito</a>
-                        </div>
-                    </div>
                 </aside>
     
 
@@ -174,12 +176,28 @@
                 </div>
             </div>
         </footer>
-    
+    </div>
+    <!-- Carrito -->
+    <div class="visualizarCarrito">
+        <div class="cart-style">     
+            <h3>Carrito</h3>
+            <hr>
+            <p id="empty">Tu carrito está vacío</p>
+        
+            <div id="carrito"></div>
+            <div id="verCarrito">
+                <a href="./carrito.html" class="btn"><i class="fa fa-angle-double-right"></i> Ver Carrito</a>
+                <a href="#" class="btn" onclick="vaciarCarrito ()"><i class="fa fa-angle-double-right"></i> Vaciar Carrito</a>
+            </div> 
+        </div>
+    </div>
+
+
     <script src="./funciones/variablesGlobales.js"></script>
     <script src="./funciones/jsonManager.js"></script>
     <script src="./funciones/storage.js"></script>
     <script src="./funciones/constructor.js"></script>
-    
+    <script src="./funciones/carrito.js"></script>
     <script src="./funciones/HTMLfunctions.js"></script>
     
     <script src="./funciones/eventos.js"></script>

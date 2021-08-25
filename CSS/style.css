@@ -206,7 +206,7 @@ footer {
   margin: 20px; }
 
 /*Parrafos---*/
-p, #visualizarCarrito #carrito p, .contenedorCarrito #carrito p {
+p, .visualizarCarrito .cart-style #carrito p, .contenedorCarrito .cart-style #carrito p {
   font-family: "Montserrat" sans-serif;
   font-size: 18px;
   text-align: center;
@@ -246,7 +246,7 @@ p, #visualizarCarrito #carrito p, .contenedorCarrito #carrito p {
       color: white; }
       .hero .hero-image .hero-text h1 {
         font-size: 80px; }
-      .hero .hero-image .hero-text p, .hero .hero-image .hero-text #visualizarCarrito #carrito p, #visualizarCarrito #carrito .hero .hero-image .hero-text p, .hero .hero-image .hero-text .contenedorCarrito #carrito p, .contenedorCarrito #carrito .hero .hero-image .hero-text p {
+      .hero .hero-image .hero-text p, .hero .hero-image .hero-text .visualizarCarrito .cart-style #carrito p, .visualizarCarrito .cart-style #carrito .hero .hero-image .hero-text p, .hero .hero-image .hero-text .contenedorCarrito .cart-style #carrito p, .contenedorCarrito .cart-style #carrito .hero .hero-image .hero-text p {
         font-size: 30px; }
 
 /* Formularios*/
@@ -289,7 +289,7 @@ p, #visualizarCarrito #carrito p, .contenedorCarrito #carrito p {
       padding-top: 80px; }
       .hero .hero-image .hero-text h1 {
         font-size: 40px; }
-      .hero .hero-image .hero-text p, .hero .hero-image .hero-text #visualizarCarrito #carrito p, #visualizarCarrito #carrito .hero .hero-image .hero-text p, .hero .hero-image .hero-text .contenedorCarrito #carrito p, .contenedorCarrito #carrito .hero .hero-image .hero-text p {
+      .hero .hero-image .hero-text p, .hero .hero-image .hero-text .visualizarCarrito .cart-style #carrito p, .visualizarCarrito .cart-style #carrito .hero .hero-image .hero-text p, .hero .hero-image .hero-text .contenedorCarrito .cart-style #carrito p, .contenedorCarrito .cart-style #carrito .hero .hero-image .hero-text p {
         font-size: 20px; } }
 
 @media screen and (max-width: 768px) {
@@ -300,39 +300,57 @@ p, #visualizarCarrito #carrito p, .contenedorCarrito #carrito p {
       padding-top: 60px; }
       .hero .hero-image .hero-text h1 {
         font-size: 30px; }
-      .hero .hero-image .hero-text p, .hero .hero-image .hero-text #visualizarCarrito #carrito p, #visualizarCarrito #carrito .hero .hero-image .hero-text p, .hero .hero-image .hero-text .contenedorCarrito #carrito p, .contenedorCarrito #carrito .hero .hero-image .hero-text p {
+      .hero .hero-image .hero-text p, .hero .hero-image .hero-text .visualizarCarrito .cart-style #carrito p, .visualizarCarrito .cart-style #carrito .hero .hero-image .hero-text p, .hero .hero-image .hero-text .contenedorCarrito .cart-style #carrito p, .contenedorCarrito .cart-style #carrito .hero .hero-image .hero-text p {
         font-size: 16px; } }
 
 /* Carrito---------------------------------------*/
-#visualizarCarrito, .contenedorCarrito {
-  display: block;
+.productsBody {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: repeat(4, auto); }
+  .productsBody header, .productsBody .hero, .productsBody main {
+    grid-column: 1 / 2; }
+  .productsBody .hero {
+    grid-row: 2 / 3; }
+  .productsBody footer {
+    grid-column: 1 / 3; }
+
+.visualizarCarrito, .contenedorCarrito {
+  display: none;
   background-color: #e7e3e3;
   font-family: "Montserrat" sans-serif;
   color: #252525;
+  min-height: 1000px;
+  width: 0;
   border-radius: 5px;
-  margin-top: 10px; }
-  #visualizarCarrito h3, .contenedorCarrito h3 {
-    padding: 10px;
-    font-weight: bold;
-    font-size: 24px;
-    margin-bottom: 20px; }
-  #visualizarCarrito p, .contenedorCarrito p, #visualizarCarrito #carrito p, .contenedorCarrito #carrito #visualizarCarrito p, .contenedorCarrito #carrito p {
-    margin: 0;
-    padding: 0;
-    padding-left: 10px;
-    text-align: left;
-    text-transform: capitalize;
-    font-size: 16px; }
-  .contenedorCarrito #carrito p .cardTitle, #visualizarCarrito #carrito p .cardTitle, .contenedorCarrito #carrito p .cardTitle {
-    font-weight: bold; }
-  #visualizarCarrito #verCarrito, .contenedorCarrito #verCarrito {
-    display: none; }
-    #visualizarCarrito #verCarrito a, .contenedorCarrito #verCarrito a {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all 0.3s ease-in-out; }
+  .visualizarCarrito .cart-style, .contenedorCarrito .cart-style {
+    position: sticky; }
+    .visualizarCarrito .cart-style h3, .contenedorCarrito .cart-style h3 {
+      padding: 10px;
       font-weight: bold;
-      margin: 5px; }
-    #visualizarCarrito #verCarrito a:hover, .contenedorCarrito #verCarrito a:hover {
-      color: #f18787;
-      transform: scale(1.05); }
+      font-size: 24px;
+      margin-bottom: 20px; }
+    .visualizarCarrito .cart-style p, .contenedorCarrito .cart-style p, .visualizarCarrito .cart-style #carrito p, .contenedorCarrito .cart-style #carrito p {
+      margin: 0;
+      padding: 0;
+      padding-left: 10px;
+      text-align: left;
+      text-transform: capitalize;
+      font-size: 16px; }
+    .visualizarCarrito .cart-style #carrito p .cardTitle, .contenedorCarrito .cart-style #carrito p .cardTitle {
+      font-weight: bold; }
+    .visualizarCarrito .cart-style #verCarrito, .contenedorCarrito .cart-style #verCarrito {
+      display: none; }
+      .visualizarCarrito .cart-style #verCarrito a, .contenedorCarrito .cart-style #verCarrito a {
+        font-weight: bold;
+        margin: 5px; }
+      .visualizarCarrito .cart-style #verCarrito a:hover, .contenedorCarrito .cart-style #verCarrito a:hover {
+        color: #f18787;
+        transform: scale(1.05); }
 
 .contenedorCarrito {
   margin: 5px;
@@ -395,6 +413,13 @@ p, #visualizarCarrito #carrito p, .contenedorCarrito #carrito p {
 #refreshStock-16 {
   display: none; }
 
+.display-block {
+  display: block; }
+
+.view-cart {
+  width: 500px;
+  padding-right: 150px; }
+
 /* Mapa de Sitio --------------------------*/
 .sitemap {
   display: flex;
@@ -445,7 +470,7 @@ p, #visualizarCarrito #carrito p, .contenedorCarrito #carrito p {
     .articulo-testimonios .bloque-testimonios .card-testimonios, .descargas-contenido .bloque-testimonios .card-testimonios, .descargas-contenido .bloque-contenido .card-testimonios {
       background-color: #252525;
       height: 300px; }
-    .articulo-testimonios .bloque-testimonios p, .descargas-contenido .bloque-testimonios p, .descargas-contenido .bloque-contenido p, .articulo-testimonios .bloque-testimonios #visualizarCarrito #carrito p, #visualizarCarrito #carrito .articulo-testimonios .bloque-testimonios p, .descargas-contenido .bloque-testimonios #visualizarCarrito #carrito p, #visualizarCarrito #carrito .descargas-contenido .bloque-testimonios p, .descargas-contenido .bloque-contenido #visualizarCarrito #carrito p, #visualizarCarrito #carrito .descargas-contenido .bloque-contenido p, .articulo-testimonios .bloque-testimonios .contenedorCarrito #carrito p, .contenedorCarrito #carrito .articulo-testimonios .bloque-testimonios p, .descargas-contenido .bloque-testimonios .contenedorCarrito #carrito p, .contenedorCarrito #carrito .descargas-contenido .bloque-testimonios p, .articulo-testimonios .descargas-contenido .bloque-contenido .contenedorCarrito #carrito p, .contenedorCarrito #carrito .articulo-testimonios .descargas-contenido .bloque-contenido p, .descargas-contenido .articulo-testimonios .bloque-contenido .contenedorCarrito #carrito p, .contenedorCarrito #carrito .descargas-contenido .articulo-testimonios .bloque-contenido p, .descargas-contenido .bloque-contenido .contenedorCarrito #carrito p, .contenedorCarrito #carrito .descargas-contenido .bloque-contenido p {
+    .articulo-testimonios .bloque-testimonios p, .descargas-contenido .bloque-testimonios p, .descargas-contenido .bloque-contenido p, .articulo-testimonios .bloque-testimonios .visualizarCarrito .cart-style #carrito p, .visualizarCarrito .cart-style #carrito .articulo-testimonios .bloque-testimonios p, .descargas-contenido .bloque-testimonios .visualizarCarrito .cart-style #carrito p, .visualizarCarrito .cart-style #carrito .descargas-contenido .bloque-testimonios p, .descargas-contenido .bloque-contenido .visualizarCarrito .cart-style #carrito p, .visualizarCarrito .cart-style #carrito .descargas-contenido .bloque-contenido p, .articulo-testimonios .bloque-testimonios .contenedorCarrito .cart-style #carrito p, .contenedorCarrito .cart-style #carrito .articulo-testimonios .bloque-testimonios p, .descargas-contenido .bloque-testimonios .contenedorCarrito .cart-style #carrito p, .contenedorCarrito .cart-style #carrito .descargas-contenido .bloque-testimonios p, .descargas-contenido .bloque-contenido .contenedorCarrito .cart-style #carrito p, .contenedorCarrito .cart-style #carrito .descargas-contenido .bloque-contenido p {
       margin-bottom: 0; }
 
 .testimoniosmax768 {
@@ -575,7 +600,7 @@ p, #visualizarCarrito #carrito p, .contenedorCarrito #carrito p {
 
 .suscripcion {
   margin: 20px; }
-  .suscripcion p, .suscripcion #visualizarCarrito #carrito p, #visualizarCarrito #carrito .suscripcion p, .suscripcion .contenedorCarrito #carrito p, .contenedorCarrito #carrito .suscripcion p {
+  .suscripcion p, .suscripcion .visualizarCarrito .cart-style #carrito p, .visualizarCarrito .cart-style #carrito .suscripcion p, .suscripcion .contenedorCarrito .cart-style #carrito p, .contenedorCarrito .cart-style #carrito .suscripcion p {
     text-align: left;
     margin: 0; }
   .suscripcion .button {
@@ -589,7 +614,7 @@ p, #visualizarCarrito #carrito p, .contenedorCarrito #carrito p {
 .descargas-contenido {
   margin-top: 40px;
   margin-bottom: 40px; }
-  .descargas-contenido p, .descargas-contenido #visualizarCarrito #carrito p, #visualizarCarrito #carrito .descargas-contenido p, .descargas-contenido .contenedorCarrito #carrito p, .contenedorCarrito #carrito .descargas-contenido p {
+  .descargas-contenido p, .descargas-contenido .visualizarCarrito .cart-style #carrito p, .visualizarCarrito .cart-style #carrito .descargas-contenido p, .descargas-contenido .contenedorCarrito .cart-style #carrito p, .contenedorCarrito .cart-style #carrito .descargas-contenido p {
     color: #ffffff;
     text-align: left;
     margin: 0; }
@@ -645,7 +670,7 @@ p, #visualizarCarrito #carrito p, .contenedorCarrito #carrito p {
   margin: 20px 20px 20px 0; }
   .descuento .subtitulo2 {
     margin-bottom: 20px; }
-  .descuento p, .descuento #visualizarCarrito #carrito p, #visualizarCarrito #carrito .descuento p, .descuento .contenedorCarrito #carrito p, .contenedorCarrito #carrito .descuento p {
+  .descuento p, .descuento .visualizarCarrito .cart-style #carrito p, .visualizarCarrito .cart-style #carrito .descuento p, .descuento .contenedorCarrito .cart-style #carrito p, .contenedorCarrito .cart-style #carrito .descuento p {
     text-align: left;
     margin-bottom: 0; }
   .descuento li {
@@ -749,7 +774,7 @@ p, #visualizarCarrito #carrito p, .contenedorCarrito #carrito p {
   /* ARTICLE- Testimonios*/
   .bloque-testimonios .card-testimonios, .descargas-contenido .bloque-contenido .card-testimonios {
     height: 380px; }
-  .bloque-testimonios p, .descargas-contenido .bloque-contenido p, .bloque-testimonios #visualizarCarrito #carrito p, #visualizarCarrito #carrito .bloque-testimonios p, .descargas-contenido .bloque-contenido #visualizarCarrito #carrito p, #visualizarCarrito #carrito .descargas-contenido .bloque-contenido p, .bloque-testimonios .contenedorCarrito #carrito p, .contenedorCarrito #carrito .bloque-testimonios p, .descargas-contenido .bloque-contenido .contenedorCarrito #carrito p, .contenedorCarrito #carrito .descargas-contenido .bloque-contenido p {
+  .bloque-testimonios p, .descargas-contenido .bloque-contenido p, .bloque-testimonios .visualizarCarrito .cart-style #carrito p, .visualizarCarrito .cart-style #carrito .bloque-testimonios p, .descargas-contenido .bloque-contenido .visualizarCarrito .cart-style #carrito p, .visualizarCarrito .cart-style #carrito .descargas-contenido .bloque-contenido p, .bloque-testimonios .contenedorCarrito .cart-style #carrito p, .contenedorCarrito .cart-style #carrito .bloque-testimonios p, .descargas-contenido .bloque-contenido .contenedorCarrito .cart-style #carrito p, .contenedorCarrito .cart-style #carrito .descargas-contenido .bloque-contenido p {
     font-size: 16px; }
   /*NOSOTROS*/
   .nosotros-img {
@@ -771,7 +796,7 @@ p, #visualizarCarrito #carrito p, .contenedorCarrito #carrito p {
       margin-left: 15%; }
   .descuento {
     margin: 40px 20px 20px 0; }
-    .descuento p, .descuento #visualizarCarrito #carrito p, #visualizarCarrito #carrito .descuento p, .descuento .contenedorCarrito #carrito p, .contenedorCarrito #carrito .descuento p {
+    .descuento p, .descuento .visualizarCarrito .cart-style #carrito p, .visualizarCarrito .cart-style #carrito .descuento p, .descuento .contenedorCarrito .cart-style #carrito p, .contenedorCarrito .cart-style #carrito .descuento p {
       text-align: center; } }
 
 @media screen and (max-width: 992px) {
@@ -790,7 +815,7 @@ p, #visualizarCarrito #carrito p, .contenedorCarrito #carrito p {
       height: 160px; }
       .novedades .card-novedades .subtitulo3 {
         font-size: 20px; }
-      .novedades .card-novedades p, .novedades .card-novedades #visualizarCarrito #carrito p, #visualizarCarrito #carrito .novedades .card-novedades p, .novedades .card-novedades .contenedorCarrito #carrito p, .contenedorCarrito #carrito .novedades .card-novedades p {
+      .novedades .card-novedades p, .novedades .card-novedades .visualizarCarrito .cart-style #carrito p, .visualizarCarrito .cart-style #carrito .novedades .card-novedades p, .novedades .card-novedades .contenedorCarrito .cart-style #carrito p, .contenedorCarrito .cart-style #carrito .novedades .card-novedades p {
         font-size: 16px; }
     .novedades .button {
       margin-bottom: 20px; }
@@ -798,7 +823,7 @@ p, #visualizarCarrito #carrito p, .contenedorCarrito #carrito p {
   .articulo-testimonios .subtitulo2, .descargas-contenido .subtitulo2 {
     font-size: 25px;
     text-align: center; }
-  .articulo-testimonios .bloque-testimonios p, .descargas-contenido .bloque-testimonios p, .descargas-contenido .bloque-contenido p, .articulo-testimonios .bloque-testimonios #visualizarCarrito #carrito p, #visualizarCarrito #carrito .articulo-testimonios .bloque-testimonios p, .descargas-contenido .bloque-testimonios #visualizarCarrito #carrito p, #visualizarCarrito #carrito .descargas-contenido .bloque-testimonios p, .descargas-contenido .bloque-contenido #visualizarCarrito #carrito p, #visualizarCarrito #carrito .descargas-contenido .bloque-contenido p, .articulo-testimonios .bloque-testimonios .contenedorCarrito #carrito p, .contenedorCarrito #carrito .articulo-testimonios .bloque-testimonios p, .descargas-contenido .bloque-testimonios .contenedorCarrito #carrito p, .contenedorCarrito #carrito .descargas-contenido .bloque-testimonios p, .articulo-testimonios .descargas-contenido .bloque-contenido .contenedorCarrito #carrito p, .contenedorCarrito #carrito .articulo-testimonios .descargas-contenido .bloque-contenido p, .descargas-contenido .articulo-testimonios .bloque-contenido .contenedorCarrito #carrito p, .contenedorCarrito #carrito .descargas-contenido .articulo-testimonios .bloque-contenido p, .descargas-contenido .bloque-contenido .contenedorCarrito #carrito p, .contenedorCarrito #carrito .descargas-contenido .bloque-contenido p {
+  .articulo-testimonios .bloque-testimonios p, .descargas-contenido .bloque-testimonios p, .descargas-contenido .bloque-contenido p, .articulo-testimonios .bloque-testimonios .visualizarCarrito .cart-style #carrito p, .visualizarCarrito .cart-style #carrito .articulo-testimonios .bloque-testimonios p, .descargas-contenido .bloque-testimonios .visualizarCarrito .cart-style #carrito p, .visualizarCarrito .cart-style #carrito .descargas-contenido .bloque-testimonios p, .descargas-contenido .bloque-contenido .visualizarCarrito .cart-style #carrito p, .visualizarCarrito .cart-style #carrito .descargas-contenido .bloque-contenido p, .articulo-testimonios .bloque-testimonios .contenedorCarrito .cart-style #carrito p, .contenedorCarrito .cart-style #carrito .articulo-testimonios .bloque-testimonios p, .descargas-contenido .bloque-testimonios .contenedorCarrito .cart-style #carrito p, .contenedorCarrito .cart-style #carrito .descargas-contenido .bloque-testimonios p, .descargas-contenido .bloque-contenido .contenedorCarrito .cart-style #carrito p, .contenedorCarrito .cart-style #carrito .descargas-contenido .bloque-contenido p {
     font-size: 16px; }
   /*DESCARGAS*/
   .suscripcion .button {
@@ -841,11 +866,11 @@ p, #visualizarCarrito #carrito p, .contenedorCarrito #carrito p {
     margin: 20px; }
     .testimoniosmax768 img {
       margin: 20px; }
-    .testimoniosmax768 p, .testimoniosmax768 #visualizarCarrito #carrito p, #visualizarCarrito #carrito .testimoniosmax768 p, .testimoniosmax768 .contenedorCarrito #carrito p, .contenedorCarrito #carrito .testimoniosmax768 p {
+    .testimoniosmax768 p, .testimoniosmax768 .visualizarCarrito .cart-style #carrito p, .visualizarCarrito .cart-style #carrito .testimoniosmax768 p, .testimoniosmax768 .contenedorCarrito .cart-style #carrito p, .contenedorCarrito .cart-style #carrito .testimoniosmax768 p {
       font-size: 16px;
       color: #ffffff;
       margin-bottom: 0; }
-      .testimoniosmax768 p .max768, .testimoniosmax768 #visualizarCarrito #carrito p .max768, #visualizarCarrito #carrito .testimoniosmax768 p .max768, .testimoniosmax768 .contenedorCarrito #carrito p .max768, .contenedorCarrito #carrito .testimoniosmax768 p .max768 {
+      .testimoniosmax768 p .max768, .testimoniosmax768 .visualizarCarrito .cart-style #carrito p .max768, .visualizarCarrito .cart-style #carrito .testimoniosmax768 p .max768, .testimoniosmax768 .contenedorCarrito .cart-style #carrito p .max768, .contenedorCarrito .cart-style #carrito .testimoniosmax768 p .max768 {
         margin-bottom: 20px; }
   /*PRODUCTOS*/
   .acordeon768 {
@@ -878,7 +903,7 @@ p, #visualizarCarrito #carrito p, .contenedorCarrito #carrito p {
       font-size: 16px; }
   .descuento .subtitulo2 {
     font-size: 20px; }
-  .descuento p, .descuento #visualizarCarrito #carrito p, #visualizarCarrito #carrito .descuento p, .descuento .contenedorCarrito #carrito p, .contenedorCarrito #carrito .descuento p, .descuento li {
+  .descuento p, .descuento .visualizarCarrito .cart-style #carrito p, .visualizarCarrito .cart-style #carrito .descuento p, .descuento .contenedorCarrito .cart-style #carrito p, .contenedorCarrito .cart-style #carrito .descuento p, .descuento li {
     font-size: 16px; }
   .newsletter {
     height: 220px; }
