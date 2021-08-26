@@ -14,7 +14,7 @@
 }
 
 .visualizarCarrito {
-    display: none;
+    display: block;
     background-color: #e7e3e3;
     font-family: $fuentePpal;
     color: $gris;
@@ -25,6 +25,14 @@
     right: 0;
     top: 0;
     transition: all 0.3s ease-in-out;
+    .close-btn{
+        padding-top: 10px;
+        display: flex;
+        justify-content: flex-end;
+        i {
+            transform: scale(1.5);
+        }
+    }
     .cart-style{
         position: sticky;
         h3 {
@@ -96,7 +104,7 @@
   }
 
   .view-cart {
-    width: 500px;
-    padding-right: 150px;
+    width: 400px;
+    padding-right: 20px;
     
   }

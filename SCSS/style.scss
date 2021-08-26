@@ -686,8 +686,11 @@
 
         .acordeon768 {
             display: block;
-            margin: 0px 10px 20px 30%;
-            .acordeonItem {
+            width: 90%;
+            margin: 0 auto;
+            .accordion-item {
+                display: flex;
+                justify-content: center;
                 padding: $margin;
                 transition: transform 1s;
                 font-family: $fuentePpal;

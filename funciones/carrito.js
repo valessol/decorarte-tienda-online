@@ -5,10 +5,13 @@ const viewCart = () => {
     cartContainer.classList.toggle("display-block")
     cartContainer.classList.toggle("view-cart")
 
-    const bodyGrid = document.querySelector("#productsBody")
-    bodyGrid.classList.toggle("productsBody")
+    // const bodyGrid = document.querySelector("#productsBody")
+    // bodyGrid.classList.toggle("productsBody")
   //console.log(cartContainer);
 };
 
 const cartBtn = document.querySelector("#cart-btn");
 cartBtn.addEventListener("click", viewCart);
+
+const closeBtn = document.querySelector(".close-btn");
+closeBtn.addEventListener("click", viewCart);
