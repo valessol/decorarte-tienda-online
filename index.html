@@ -180,18 +180,81 @@
     <!-- Carrito -->
     <div class="visualizarCarrito">
         <div class="close-btn">
-            <a href="#" class="btn"><i class="fa fa-times"></i></a>
+            <a href="#" class="btn"><i id="cross" class="fa fa-times display-none"></i></a>
         </div>
         <div class="cart-style">     
             <h3>Carrito</h3>
+            <div id="cart-titles" class="conatiner">
+                <div class="row">
+                    <div class="col-6">
+                        <p class="cardTitle">Producto</p>
+                    </div>
+                    <div class="col-3">
+                        <p class="cardTitle">Cantidad</p>
+                    </div>  
+                    <div class="col-3">
+                        <p class="cardTitle">Precio</p>
+                    </div> 
+                </div>  
+            </div>
             <hr>
             <p id="empty">Tu carrito está vacío</p>
         
-            <div id="carrito"></div>
-            <div id="verCarrito">
-                <a href="./carrito.html" class="btn"><i class="fa fa-angle-double-right"></i> Ver Carrito</a>
-                <a href="#" class="btn" onclick="vaciarCarrito ()"><i class="fa fa-angle-double-right"></i> Vaciar Carrito</a>
-            </div> 
+            <div id="carrito" class="container"></div>
+
+            <div class="container">
+                <div class="contenedorCarrito">
+                    <div class="row">
+                        <p class="col-md-6">Subtotal</p>
+                        <p class="col-md-6 subtotalCarrito"></p>
+                    </div>
+                    <div class="row">
+                        <p class="col-md-6">IVA</p>
+                        <p class="col-md-6 ivaCarrito"></p>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <p class="col-md-6 totalTitle">Total</p>
+                        <p class="col-md-6 totalCarrito"></p>
+                    </div>
+                </div>
+                <div id="verCarrito">
+                    <a href="#" class="btn" onclick="vaciarCarrito ()"><i class="fa fa-angle-double-right"></i> Vaciar Carrito</a>
+                    <button type="button" class="btn button" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa fa-angle-double-right"></i>Comprar</button>
+                </div>
+            </div>
+
+            <!-- Finalizar compra -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Finalizar Compra</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    <div id="emailHelp" class="form-text">
+                                        Te contactaremos por este medio para coordinar la entrega
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputName" class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" id="exampleInputName">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary" onclick= "vaciarCarrito()">Submit</button>
+                                </div>
+                            </form>
+                      </div>                        
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 

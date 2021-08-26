@@ -10,7 +10,7 @@ const agregarAlCarrito = (e) => {
     let carrito = aObj (carritoString);
    
     //Modifico la cantidad del producto y añado al carrito
-    let prodPosition = productsJSON.findIndex((p) => p.id == e);
+    let prodPosition = productsJSON.findIndex((p) => p.id === e);
     let cartPosition;
 
     if (carrito === null) {
@@ -22,9 +22,6 @@ const agregarAlCarrito = (e) => {
         let existe = carrito.findIndex(item => item.id == itemId);
         existe >= 0 ? carrito[existe].cantidad ++ : carrito.push(new ProductsInCart (productsJSON[prodPosition].id, productsJSON[prodPosition].nombre, productsJSON[prodPosition].precio, 1)); 
     }
-    //Mostrar carrito
-    if (carrito.length >= 1) carritoHTML (carrito);  //--> HTMLfunctions.js
-    console.log(carrito);
     
     setSessionStorage(cartStorage, aString(carrito));
     productsJSON[prodPosition].stock -= 1;
@@ -33,6 +30,7 @@ const agregarAlCarrito = (e) => {
 
     //Renderizar pantalla
     HTMLProducts (); //--> load.js
+    productsCart();
 }
 
 const vaciarCarrito = () => {

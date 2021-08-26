@@ -30,43 +30,20 @@ const startLoad = () => {
     HTMLProducts();
 }
 
-//Si ya hay productos en el carrito, entonces renderizo esto al volver al index
-const hayProductos = () => {
-    HTMLProducts ();
-    let carritoString = getSessionStorage (cartStorage);
-    let carrito = aObj (carritoString);
 
-    if(carrito === null) carrito =[];
-    carritoHTML (carrito);
-}
 
-const sumarCarrito = () => {
-    let carritoString = getSessionStorage (cartStorage);
-    let carrito = aObj (carritoString);
-    let subtotal = 0;
-    let IVA = 0;
-    let total = 0;
 
-    carrito.forEach(element => {
-        subtotal += (element.precio * element.cantidad);
-    })
-    IVA = parseFloat((subtotal * 0.21).toFixed(2));
-    total = subtotal + IVA;
-        
-    $('.subtotalCarrito').html(`<p class="col-md-6 subtotalCarrito">$ ${subtotal}</p>`); 
-    $('.ivaCarrito').html(`<p class="col-md-6 ivaCarrito">$ ${IVA}</p>`); 
-    $('.totalCarrito').html(`<p class="col-md-6 totalCarrito">$ ${total}</p>`); 
-}
 
-const visualizarCarrito = () => {
-    let carritoString = getSessionStorage (cartStorage);
-    let carrito = aObj (carritoString);
-    let carritoCards = [];
 
-    carrito.forEach(element => {
-        carritoCards.push (verCarrito (element)); //--> HTMLfunctions.js
-    })
+// const visualizarCarrito = () => {
+//     let carritoString = getSessionStorage (cartStorage);
+//     let carrito = aObj (carritoString);
+//     let carritoCards = [];
 
-    $('#carritoActual').html(carritoCards);  
-    sumarCarrito();
-}
+//     carrito.forEach(element => {
+//         carritoCards.push (verCarrito (element)); //--> HTMLfunctions.js
+//     })
+
+//     $('#carritoActual').html(carritoCards);  
+//     sumarCarrito();
+// }

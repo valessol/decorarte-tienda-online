@@ -17,23 +17,8 @@ const productosHTML = (product) => `<div class="galeriaItems">
 </div>`
 
 
-//Mostrar productos del carrito
-const carritoHTML = (p) => {
-        $('#empty').css("display", "none");
-        $('#verCarrito').show();
-        $('#carrito').html(`<p>Productos añadidos: ${p.length}</p>`);    
-}
+
     
 
-//Visualizar los prodcutos en la página del carrito
-const verCarrito = (prod) =>
-    `<div class="col-6">
-        <p class="cardTitle">${prod.nombre}</p>
-    </div>
-    <div class="col-3">
-        <p>${prod.cantidad}</p>
-    </div>  
-    <div class="col-3">
-        <p>$ ${prod.precio}</p>
-    </div>  
-    <hr>`
+
+    
